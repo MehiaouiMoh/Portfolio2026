@@ -1,0 +1,18 @@
+# ── PHP : forcer PHP 8.x si besoin (o2switch est souvent déjà en 8) ──
+# (à activer seulement si le sélecteur PHP du cPanel ne suffit pas)
+
+# ── Page d'accueil ──
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# ── Sécurité : bloquer l'accès direct aux fichiers/dossiers sensibles ──
+RewriteRule ^\.env$                       - [F,L]
+RewriteRule ^composer\.(json|lock)$       - [F,L]
+RewriteRule ^router\.php$                 - [F,L]
+RewriteRule ^(src|config|database|tests|vendor)(/.*)?$ - [F,L]
+
+# ── Routing API : toute requête /api/* → front controller ──
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/ api/index.php [L]
