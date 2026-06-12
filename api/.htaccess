@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Rôle : dire à Apache de rediriger toutes les URLs vers index.php
+# Servir directement les fichiers/dossiers existants
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Sinon, tout vers index.php
+RewriteRule ^ index.php [QSA,L]

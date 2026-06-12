@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détails formation — Mehiaoui Mohamed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* ── PAGE LAYOUT ── */
+    .fd-page {
+      padding-top: var(--nav-h);
+      min-height: 100vh;
+      background: #fff;
+    }
+
+    /* ── HEADER ── */
+    .fd-header {
+      background: #f7f8fa;
+      border-bottom: 1px solid var(--clr-border);
+    }
+
+    .fd-header-inner {
+      max-width: var(--page-max);
+      margin: 0 auto;
+      padding: 36px var(--page-pad) 32px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .fd-title {
+      font-size: clamp(24px, 3.5vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--clr-text);
+      margin: 0 0 10px;
+    }
+
+    .fd-subtitle {
+      font-size: 14px;
+      color: var(--clr-muted);
+      line-height: 1.6;
+      max-width: 520px;
+      margin: 0;
+    }
+
+    .fd-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 18px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--clr-text);
+      background: #fff;
+      border: 1px solid var(--clr-border);
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .fd-back:hover {
+      background: var(--clr-surface);
+      border-color: #ccc;
+    }
+
+    /* ── STATS ── */
+    .fd-stats-section {
+      background: #fff;
+      border-bottom: 1px solid var(--clr-border);
+    }
+
+    .fd-stats-inner {
+      max-width: var(--page-max);
+      margin: 0 auto;
+      padding: 28px var(--page-pad);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .fd-stat {
+      background: #fff;
+      border: 1px solid var(--clr-border);
+      border-radius: 14px;
+      padding: 20px 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fd-stat--current {
+      background: linear-gradient(135deg, #2D4EE8 0%, #4B6CF7 50%, #7B93FF 100%);
+      border: none;
+      color: #fff;
+    }
+
+    .fd-stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-muted);
+      margin-bottom: 8px;
+    }
+
+    .fd-stat--current .fd-stat-label {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .fd-stat-value {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--clr-text);
+      margin-bottom: 4px;
+    }
+
+    .fd-stat--current .fd-stat-value {
+      font-size: 28px;
+      color: #fff;
+    }
+
+    .fd-stat-sub {
+      font-size: 12px;
+      color: var(--clr-muted);
+    }
+
+    .fd-stat--current .fd-stat-sub {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .fd-stat-icon {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--clr-surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .fd-stat--current .fd-stat-icon {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .fd-stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.2);
+      border-radius: 50px;
+      padding: 3px 10px;
+      margin-bottom: 10px;
+    }
+
+    .fd-stat-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #4dffa3;
+    }
+
+    /* ── BODY TWO-COLUMN ── */
+    .fd-body {
+      max-width: var(--page-max);
+      margin: 0 auto;
+      padding: 32px var(--page-pad) 64px;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* ── MODULE CARDS ── */
+    .fd-module-card {
+      background: #fff;
+      border: 1px solid var(--clr-border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 16px;
+    }
+
+    .fd-module-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .fd-module-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .fd-module-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--clr-text);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .fd-module-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--clr-text);
+      line-height: 1.3;
+      margin: 0 0 4px;
+    }
+
+    .fd-module-desc {
+      font-size: 12px;
+      color: var(--clr-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .fd-module-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .fd-sem-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--clr-accent);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .fd-sem-label svg {
+      flex-shrink: 0;
+    }
+
+    .fd-ens-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* Accordion wrapper */
+    .fd-ens-accordion {
+      border-radius: 10px;
+      border: 1px solid var(--clr-border);
+      overflow: hidden;
+      background: var(--clr-surface);
+      transition: border-color 0.15s;
+    }
+
+    .fd-ens-accordion.is-open {
+      border-color: #c5cadb;
+      background: #fff;
+    }
+
+    /* Clickable header row */
+    .fd-ens-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s;
+    }
+
+    .fd-ens-accordion.is-open .fd-ens-item {
+      background: #fff;
+    }
+
+    .fd-ens-item:hover {
+      background: #f0f1f3;
+    }
+
+    .fd-ens-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      background: #fff;
+      border: 1px solid var(--clr-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .fd-ens-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .fd-ens-name {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--clr-text);
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Chevron arrow — rotates when open */
+    .fd-ens-arrow {
+      flex-shrink: 0;
+      color: var(--clr-muted);
+      transition: transform 0.22s ease;
+    }
+
+    .fd-ens-accordion.is-open .fd-ens-arrow {
+      transform: rotate(90deg);
+    }
+
+    /* Expandable body */
+    .fd-ens-body {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.25s ease;
+    }
+
+    .fd-ens-accordion.is-open .fd-ens-body {
+      grid-template-rows: 1fr;
+    }
+
+    .fd-ens-body-inner {
+      overflow: hidden;
+    }
+
+    .fd-ens-body-content {
+      padding: 10px 12px 14px 52px;
+      font-size: 12px;
+      color: var(--clr-muted);
+      line-height: 1.65;
+      border-top: 1px solid var(--clr-border);
+    }
+
+    .fd-empty-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      border: 1px dashed var(--clr-border);
+      border-radius: 10px;
+      font-size: 12px;
+      color: var(--clr-muted);
+      font-style: italic;
+      text-align: center;
+    }
+
+    .fd-skeleton-module {
+      background: #fff;
+      border: 1px solid var(--clr-border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 16px;
+    }
+
+    .fd-sk-line {
+      height: 14px;
+      border-radius: 6px;
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 400% 100%;
+      animation: shimmer 1.4s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ── SIDEBAR ── */
+    .fd-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: sticky;
+      top: calc(var(--nav-h) + 16px);
+    }
+
+    .fds-card {
+      background: #fff;
+      border: 1px solid var(--clr-border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    /* Période card */
+    .fds-periode-head {
+      background: linear-gradient(135deg, #1a2b3c 0%, #1e3a2f 100%);
+      padding: 20px 22px 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fds-periode-head::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('assets/images/scolarite/informatique.jpg') center/cover no-repeat;
+      opacity: 0.18;
+    }
+
+    .fds-periode-head-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .fds-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 4px;
+    }
+
+    .fds-year {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    .fds-periode-body {
+      padding: 16px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .fds-info-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--clr-text);
+    }
+
+    .fds-info-row svg {
+      color: var(--clr-muted);
+      flex-shrink: 0;
+    }
+
+    .fds-badge-active {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #1a7a4a;
+      background: #d4f4e2;
+      border-radius: 50px;
+      padding: 3px 10px;
+    }
+
+    .fds-badge-active::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #1a7a4a;
+      flex-shrink: 0;
+    }
+
+    /* Avancement card */
+    .fds-avancement {
+      padding: 22px;
+    }
+
+    .fds-avancement-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--clr-muted);
+      margin-bottom: 20px;
+    }
+
+    .fds-donut-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .fds-donut {
+      position: relative;
+      width: 130px;
+      height: 130px;
+    }
+
+    .fds-donut svg {
+      transform: rotate(-90deg);
+    }
+
+    .fds-donut-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .fds-donut-pct {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--clr-text);
+      line-height: 1;
+    }
+
+    .fds-donut-sub {
+      font-size: 10px;
+      color: var(--clr-muted);
+      font-weight: 500;
+    }
+
+    .fds-sem-indicators {
+      display: flex;
+      gap: 16px;
+    }
+
+    .fds-sem-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--clr-text);
+    }
+
+    .fds-sem-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .fds-ens-counts {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--clr-muted);
+      padding: 0 4px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .fd-body {
+        grid-template-columns: 1fr;
+      }
+
+      .fd-sidebar {
+        position: static;
+        order: -1;
+      }
+
+      .fd-stats-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .fd-stats-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .fd-module-cols {
+        grid-template-columns: 1fr;
+      }
+
+      .fd-header-inner {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html#hero" class="nav-logo">Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About me</a></li>
+        <li><a href="index.html#competences">Compétences</a></li>
+        <li><a href="index.html#projets">Projets</a></li>
+        <li><a href="index.html#experiences">Expériences professionnelles</a></li>
+      </ul>
+      <a href="index.html#contact" class="btn btn--primary nav-cta">Contact</a>
+      <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile" aria-hidden="true">
+      <ul>
+        <li><a href="index.html#about">About me</a></li>
+        <li><a href="index.html#competences">Compétences</a></li>
+        <li><a href="index.html#projets">Projets</a></li>
+        <li><a href="index.html#experiences">Expériences professionnelles</a></li>
+        <li><a href="index.html#contact" class="btn btn--primary nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="fd-page">
+
+    <!-- ── HEADER ── -->
+    <header class="fd-header">
+      <div class="fd-header-inner">
+        <div>
+          <h1 class="fd-title" id="fd-title">—</h1>
+          <p class="fd-subtitle" id="fd-subtitle"></p>
+        </div>
+        <a href="parcours.html" class="fd-back">← Retour</a>
+      </div>
+    </header>
+
+    <!-- ── STATS ── -->
+    <section class="fd-stats-section">
+      <div class="fd-stats-inner">
+
+        <!-- Stat : année en cours -->
+        <div class="fd-stat fd-stat--current">
+          <div class="fd-stat-badge">
+            <span class="fd-stat-badge-dot"></span>
+            Année en cours
+          </div>
+          <div class="fd-stat-value" id="sd-niveau">—</div>
+          <div class="fd-stat-sub" id="sd-intitule"></div>
+          <div class="fd-stat-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8l3.5 3.5L13 5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Stat : modules -->
+        <div class="fd-stat">
+          <div class="fd-stat-label">Modules</div>
+          <div class="fd-stat-value" id="sd-modules">—</div>
+          <div class="fd-stat-sub">S5 + S6</div>
+          <div class="fd-stat-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <rect x="2" y="2" width="5" height="5" rx="1.5" stroke="#888" stroke-width="1.5"/>
+              <rect x="9" y="2" width="5" height="5" rx="1.5" stroke="#888" stroke-width="1.5"/>
+              <rect x="2" y="9" width="5" height="5" rx="1.5" stroke="#888" stroke-width="1.5"/>
+              <rect x="9" y="9" width="5" height="5" rx="1.5" stroke="#888" stroke-width="1.5"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Stat : enseignements -->
+        <div class="fd-stat">
+          <div class="fd-stat-label">Enseignements</div>
+          <div class="fd-stat-value" id="sd-enseignements">—</div>
+          <div class="fd-stat-sub">Répartis sur les modules</div>
+          <div class="fd-stat-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 4h10M3 8h7M3 12h5" stroke="#888" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Stat : semestres -->
+        <div class="fd-stat">
+          <div class="fd-stat-label">Semestres</div>
+          <div class="fd-stat-value">2</div>
+          <div class="fd-stat-sub">Actifs cette année</div>
+          <div class="fd-stat-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="5.5" stroke="#888" stroke-width="1.5"/>
+              <path d="M8 4v4l2.5 2.5" stroke="#888" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── BODY ── -->
+    <div class="fd-body">
+
+      <!-- MODULE LIST (left) -->
+      <div class="fd-modules-col" id="fd-modules">
+        <!-- skeleton -->
+        <div class="fd-skeleton-module">
+          <div class="fd-sk-line" style="width:60%;margin-bottom:12px"></div>
+          <div class="fd-sk-line" style="width:90%;height:10px;margin-bottom:8px"></div>
+          <div class="fd-sk-line" style="width:75%;height:10px"></div>
+        </div>
+        <div class="fd-skeleton-module">
+          <div class="fd-sk-line" style="width:50%;margin-bottom:12px"></div>
+          <div class="fd-sk-line" style="width:80%;height:10px"></div>
+        </div>
+        <div class="fd-skeleton-module">
+          <div class="fd-sk-line" style="width:55%;margin-bottom:12px"></div>
+          <div class="fd-sk-line" style="width:85%;height:10px;margin-bottom:8px"></div>
+          <div class="fd-sk-line" style="width:60%;height:10px"></div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR (right) -->
+      <aside class="fd-sidebar">
+
+        <!-- Période card -->
+        <div class="fds-card">
+          <div class="fds-periode-head">
+            <div class="fds-periode-head-content">
+              <div class="fds-label">Période</div>
+              <div class="fds-year" id="fds-year">—</div>
+            </div>
+          </div>
+          <div class="fds-periode-body">
+            <span class="fds-badge-active" id="fds-badge">Année en cours</span>
+            <div class="fds-info-row">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M7 1.5C4.5 1.5 2.5 3.5 2.5 6c0 3.5 4.5 6.5 4.5 6.5S11.5 9.5 11.5 6c0-2.5-2-4.5-4.5-4.5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                <circle cx="7" cy="6" r="1.5" stroke="currentColor" stroke-width="1.2"/>
+              </svg>
+              <span id="fds-school">—</span>
+            </div>
+            <div class="fds-info-row">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <rect x="1.5" y="3" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M1.5 6h11" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M4.5 1.5v3M9.5 1.5v3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+              <span id="fds-dates">—</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avancement card -->
+        <div class="fds-card fds-avancement">
+          <div class="fds-avancement-title">Avancement de l'année</div>
+          <div class="fds-donut-wrap">
+            <div class="fds-donut">
+              <svg width="130" height="130" viewBox="0 0 130 130">
+                <!-- Track -->
+                <circle cx="65" cy="65" r="50"
+                  fill="none"
+                  stroke="#f0f1f3"
+                  stroke-width="12"/>
+                <!-- Progress -->
+                <circle cx="65" cy="65" r="50"
+                  fill="none"
+                  stroke="var(--clr-accent)"
+                  stroke-width="12"
+                  stroke-linecap="round"
+                  stroke-dasharray="314.16"
+                  stroke-dashoffset="314.16"
+                  id="fds-progress-ring"/>
+              </svg>
+              <div class="fds-donut-text">
+                <div class="fds-donut-pct" id="fds-pct">—</div>
+                <div class="fds-donut-sub">avancement</div>
+              </div>
+            </div>
+            <div class="fds-ens-counts">
+              <span id="fds-ens-done">— modules S5</span>
+              <span id="fds-ens-total">S6 en cours</span>
+            </div>
+            <div class="fds-sem-indicators">
+              <div class="fds-sem-pill">
+                <div class="fds-sem-dot" style="background: var(--clr-accent)"></div>
+                Semestre 5
+              </div>
+              <div class="fds-sem-pill">
+                <div class="fds-sem-dot" style="background: #e0e3e9"></div>
+                Semestre 6
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+
+  </div>
+
+  <script src="assets/js/app.js"></script>
+  <script>
+    /* ── NAV BURGER ── */
+    const burger = document.getElementById('navBurger');
+    const mobile = document.getElementById('navMobile');
+    burger.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') === 'true';
+      burger.setAttribute('aria-expanded', String(!open));
+      mobile.setAttribute('aria-hidden', String(open));
+      mobile.classList.toggle('is-open', !open);
+    });
+
+    /* ── NAV SCROLL ── */
+    const navEl = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      navEl.classList.toggle('is-scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    /* ── HELPERS ── */
+    function calcProgress(dateDebut, dateFin) {
+      const start = new Date(dateDebut);
+      const end   = dateFin ? new Date(dateFin) : new Date();
+      const today = new Date();
+      if (today <= start) return 0;
+      if (today >= end)   return 100;
+      return Math.round(((today - start) / (end - start)) * 100);
+    }
+
+    function setDonut(pct) {
+      const circumference = 314.16;
+      const offset = circumference * (1 - pct / 100);
+      document.getElementById('fds-progress-ring').style.strokeDashoffset = offset;
+      document.getElementById('fds-pct').textContent = pct + '%';
+    }
+
+    function shortDesc(desc, max = 48) {
+      if (!desc) return '';
+      return desc.length > max ? desc.slice(0, max).trim() + '…' : desc;
+    }
+
+    /* ── RENDER MODULES ── */
+    function renderModuleIcon() {
+      return `<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <rect x="2" y="2" width="10" height="10" rx="2" stroke="#bbb" stroke-width="1.2"/>
+        <path d="M5 7l2 2 2-3" stroke="#bbb" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>`;
+    }
+
+    function renderEnsItem(e) {
+      const hasDesc = !!e.description;
+      return `<div class="fd-ens-accordion" data-ens="${esc(String(e.id))}">
+        <div class="fd-ens-item">
+          <div class="fd-ens-icon">${renderModuleIcon()}</div>
+          <div class="fd-ens-text">
+            <div class="fd-ens-name" title="${esc(e.nom)}">${esc(e.nom)}</div>
+          </div>
+          ${hasDesc
+            ? `<svg class="fd-ens-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+               </svg>`
+            : ''}
+        </div>
+        ${hasDesc
+          ? `<div class="fd-ens-body">
+               <div class="fd-ens-body-inner">
+                 <div class="fd-ens-body-content">${esc(e.description)}</div>
+               </div>
+             </div>`
+          : ''}
+      </div>`;
+    }
+
+    /* Toggle accordion on click — delegated on the modules container */
+    document.getElementById('fd-modules').addEventListener('click', e => {
+      const item = e.target.closest('.fd-ens-item');
+      if (!item) return;
+      const acc = item.closest('.fd-ens-accordion');
+      if (!acc || !acc.querySelector('.fd-ens-body')) return;
+      acc.classList.toggle('is-open');
+    });
+
+    function renderModuleCard(idx, s5Module, s6Module, s5Ens, s6Ens) {
+      const title = s5Module
+        ? s5Module.intitule
+        : s6Module.intitule;
+
+      const desc = s5Module
+        ? s5Module.description
+        : s6Module.description;
+
+      const s5Col = s5Module
+        ? `<div>
+            <div class="fd-sem-label">
+              <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                <polygon points="0,0 8,4 0,8" fill="var(--clr-accent)"/>
+              </svg>
+              Semestre 5
+            </div>
+            <div class="fd-ens-list">
+              ${s5Ens.length ? s5Ens.map(renderEnsItem).join('') : '<div class="fd-empty-col">Aucun enseignement</div>'}
+            </div>
+          </div>`
+        : `<div class="fd-empty-col">Aucun module S5</div>`;
+
+      const s6Col = s6Module
+        ? `<div>
+            <div class="fd-sem-label">
+              <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                <polygon points="0,0 8,4 0,8" fill="var(--clr-accent)"/>
+              </svg>
+              Semestre 6
+            </div>
+            <div class="fd-ens-list">
+              ${s6Ens.length ? s6Ens.map(renderEnsItem).join('') : '<div class="fd-empty-col">Aucun enseignement</div>'}
+            </div>
+          </div>`
+        : `<div class="fd-empty-col">Aucun module correspondant au S6</div>`;
+
+      return `<div class="fd-module-card">
+        <div class="fd-module-header">
+          <div class="fd-module-num">${idx}</div>
+          <div>
+            <p class="fd-module-title">${esc(title)}</p>
+            ${desc ? `<p class="fd-module-desc">${esc(desc)}</p>` : ''}
+          </div>
+        </div>
+        <div class="fd-module-cols">
+          ${s5Col}
+          ${s6Col}
+        </div>
+      </div>`;
+    }
+
+    /* ── MAIN ── */
+    (async () => {
+      /* Read scolarite_id from URL param (default: find the current one) */
+      const params      = new URLSearchParams(window.location.search);
+      const targetId    = params.get('id') ? parseInt(params.get('id')) : null;
+
+      /* Load scolarite + modules in parallel */
+      const [scolarites, allModules] = await Promise.all([
+        apiFetch('scolarite'),
+        apiFetch('modules'),
+      ]);
+
+      if (!scolarites || !allModules) return;
+
+      /* Determine target scolarite */
+      let scolarite = targetId
+        ? scolarites.find(s => s.id === targetId)
+        : scolarites.find(s => !s.date_fin || new Date(s.date_fin) >= new Date());
+
+      if (!scolarite) scolarite = scolarites[scolarites.length - 1];
+
+      /* ── HEADER ── */
+      document.title = `${scolarite.intitule} — Mehiaoui Mohamed`;
+      document.getElementById('fd-title').textContent    = `${scolarite.niveau} — ${scolarite.intitule.split('—')[1]?.trim() || scolarite.intitule}`;
+      document.getElementById('fd-subtitle').textContent = scolarite.description || '';
+
+      /* ── STATS (scolarite info) ── */
+      document.getElementById('sd-niveau').textContent  = scolarite.niveau;
+      document.getElementById('sd-intitule').textContent = (scolarite.intitule.split('—')[1]?.trim() || '').slice(0, 30);
+
+      /* ── SIDEBAR ── */
+      const yearStart = scolarite.date_debut ? scolarite.date_debut.slice(0, 4) : '—';
+      const yearEnd   = scolarite.date_fin   ? scolarite.date_fin.slice(0, 4)   : '—';
+      document.getElementById('fds-year').textContent   = `${yearStart} — ${yearEnd}`;
+      document.getElementById('fds-school').textContent = scolarite.etablissement + ' · ' + scolarite.ville;
+
+      const fmtDate = d => {
+        if (!d) return '—';
+        const [y, m] = d.split('-');
+        const months = ['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+        return months[parseInt(m, 10) - 1] + ' ' + y;
+      };
+      document.getElementById('fds-dates').textContent =
+        fmtDate(scolarite.date_debut) + ' → ' + (scolarite.date_fin ? fmtDate(scolarite.date_fin) : 'En cours');
+
+      /* Progress ring */
+      const pct = calcProgress(scolarite.date_debut, scolarite.date_fin);
+      setDonut(pct);
+
+      /* ── MODULES ── */
+      const modules = allModules.filter(m => m.scolarite_id === scolarite.id);
+      const s5Mods  = modules.filter(m => m.niveau && m.niveau.toLowerCase().includes('5'));
+      const s6Mods  = modules.filter(m => m.niveau && m.niveau.toLowerCase().includes('6'));
+
+      /* Update stats */
+      document.getElementById('sd-modules').textContent = modules.length;
+
+      /* Load all enseignements in parallel */
+      const ensData = await Promise.all(
+        modules.map(m => apiFetch(`modules/${m.id}/enseignements`).then(d => ({ id: m.id, ens: d || [] })))
+      );
+
+      const ensMap = {};
+      ensData.forEach(({ id, ens }) => { ensMap[id] = ens; });
+
+      const totalEns = Object.values(ensMap).reduce((sum, arr) => sum + arr.length, 0);
+      document.getElementById('sd-enseignements').textContent = totalEns;
+
+      /* Sidebar enseignement info */
+      const s5Ens = s5Mods.reduce((acc, m) => acc + (ensMap[m.id]?.length || 0), 0);
+      document.getElementById('fds-ens-done').textContent  = `${s5Ens} enseignements S5`;
+      document.getElementById('fds-ens-total').textContent = `${totalEns - s5Ens} enseignements S6`;
+
+      /* Pair S5 + S6 by index */
+      const maxRows = Math.max(s5Mods.length, s6Mods.length);
+      let html = '';
+      for (let i = 0; i < maxRows; i++) {
+        const s5m = s5Mods[i] || null;
+        const s6m = s6Mods[i] || null;
+        html += renderModuleCard(
+          i + 1,
+          s5m, s6m,
+          s5m ? (ensMap[s5m.id] || []) : [],
+          s6m ? (ensMap[s6m.id] || []) : [],
+        );
+      }
+
+      document.getElementById('fd-modules').innerHTML = html || '<p style="color:var(--clr-muted);font-size:14px;">Aucun module trouvé.</p>';
+    })();
+  </script>
+</body>
+</html>

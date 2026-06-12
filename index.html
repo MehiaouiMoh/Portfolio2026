@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mehiaoui Mohamed — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="#about">About me</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#experiences">Expériences professionnelles</a></li>
+      </ul>
+      <a href="#contact" class="btn btn--primary nav-cta">Contact</a>
+      <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile" aria-hidden="true">
+      <ul>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#experiences">Expériences professionnelles</a></li>
+        <li><a href="#contact" class="btn btn--primary nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Salut moi c'est</p>
+      <h1 class="hero-name">Mehiaoui Mohamed</h1>
+      <p class="hero-sub">Portfolio 2026 – Etudiant en développement web et mobile</p>
+      <p class="hero-sub">Futur développeur fullstack</p>
+      <a href="assets/cv.pdf" class="btn btn--primary btn--lg hero-cta" download>Téléchargez mon cv</a>
+    </div>
+    <div class="hero-scroll">
+      <span>SCROLL DOWN</span>
+      <div class="scroll-indicator">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── A PROPOS ── -->
+  <section class="about" id="about">
+    <div class="about-header">
+      <h2 class="section-title">A propos de moi</h2>
+      <p class="section-sub">Etudiant en développement web et mobile, passionné par la création de solutions modernes, utiles et performantes</p>
+    </div>
+    <div class="about-body">
+      <div class="about-media">
+        <img src="assets/images/about_me.jpg" alt="Mehiaoui Mohamed" class="about-img">
+        <div class="about-badge about-badge--top">
+          <p>Etudiant en BUT 3ème année en parcours conception, développement et validation d'application</p>
+        </div>
+        <div class="about-badge about-badge--bottom">
+          <p>Passionné par le code qualitatif, modulable, compréhensible et maintenable</p>
+        </div>
+      </div>
+      <div class="about-text">
+        <h3 class="about-heading">Apprenez à me connaitre !</h3>
+        <p>Je suis Mehiaoui Mohamed, étudiant passionné par le développement web et mobile. J'aime donner vie aux idées en les transformant en applications concrètes, performantes et agréables à utiliser.</p>
+        <p>Curieux et toujours en quête de progression, j'aime me challenger, découvrir de nouvelles technologies et explorer différents aspects du développement afin de créer des solutions durables et bien pensées.</p>
+        <div class="about-stats">
+          <div class="about-stat">
+            <span class="about-stat-num">3</span>
+            <span class="about-stat-label">Années BUT</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">6+</span>
+            <span class="about-stat-label">Projets</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">2</span>
+            <span class="about-stat-label">Stages</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PARCOURS ── -->
+  <section class="parcours" id="parcours">
+    <div class="parcours-header">
+      <h2 class="section-title">Curieux de mon <span class="accent">parcours académique</span>&nbsp;?</h2>
+      <p class="section-sub">Chaque étape a contribué à construire mes compétences et à forger ma passion</p>
+    </div>
+    <div class="parcours-body">
+      <div class="parcours-visual">
+        <img src="assets/images/parcours.png" alt="Parcours académique" class="parcours-img">
+      </div>
+      <div class="parcours-cards" id="parcours-cards">
+        <div class="parcours-card skeleton"></div>
+        <div class="parcours-card skeleton"></div>
+      </div>
+    </div>
+    <div class="parcours-footer">
+      <div class="parcours-cta-group">
+        <div class="parcours-chevrons" aria-hidden="true">&rsaquo;&rsaquo;</div>
+        <a href="parcours.html" class="btn btn--primary btn--lg">
+          Voir mon parcours
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <p>Découvrez mon parcours en détails ainsi que les compétences acquises au fil de mes études</p>
+    </div>
+  </section>
+
+  <!-- ── COMPÉTENCES ── -->
+  <section class="competences" id="competences">
+    <div class="competences-header">
+      <h2 class="section-title">Les technologies que je <span class="accent">maîtrise</span> .</h2>
+      <p class="section-sub">Langages, frameworks et outils du quotidien</p>
+    </div>
+    <div class="competences-filters" id="competences-filters">
+      <button class="filter-btn active" data-cat="all">Tout</button>
+    </div>
+    <div class="competences-grid" id="competences-grid"></div>
+  </section>
+
+  <!-- ── PROJETS ── -->
+  <section class="projets" id="projets">
+    <div class="projets-stage" id="projets-stage">
+      <div class="projets-center">
+        <p class="projets-counter">1 2 3 ...</p>
+        <p class="projets-label"><span>Projets</span> !</p>
+        <p class="projets-sub">Une sélection de mes projets développés en solo ou en équipe</p>
+        <a href="projets.html" class="btn btn--primary btn--lg">
+          Tout mes projets
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPÉRIENCES ── -->
+  <section class="experiences" id="experiences">
+    <div class="experiences-inner">
+      <div class="experiences-header">
+        <h2 class="section-title">Expériences <span class="accent">professionnelles</span></h2>
+        <p class="section-sub">Des opportunités qui ont renforcé ma vision du développement</p>
+      </div>
+      <div class="experiences-list" id="experiences-list">
+        <div class="exp-skeleton"></div>
+        <div class="exp-skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT / FOOTER ── -->
+  <footer class="footer" id="contact">
+    <div class="footer-content">
+      <h2 class="footer-title">Travaillons <span class="accent">ensemble</span> .</h2>
+      <p>N'hésitez pas à me contacter pour toute opportunité ou collaboration.</p>
+      <a href="mailto:mohamed.mehiaoui93600@gmail.com" class="btn btn--primary btn--lg">Envoyer un message</a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Mehiaoui Mohamed</p>
+      <div class="footer-links">
+        <a href="#" target="_blank" rel="noopener">GitHub</a>
+        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

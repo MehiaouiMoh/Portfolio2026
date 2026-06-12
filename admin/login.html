@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connexion — Admin Portfolio</title>
+
+  <!-- Google Fonts : Inter pour une typographie moderne et lisible -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ================================================================
+       VARIABLES CSS
+       Toutes les valeurs de design centralisées ici.
+       Pour changer le thème : modifier uniquement cette section.
+       ================================================================ */
+    :root {
+      --clr-primary:       #2563eb;
+      --clr-primary-dark:  #1d4ed8;
+      --clr-dark:          #0f172a;
+      --clr-white:         #ffffff;
+      --clr-muted:         #64748b;
+      --clr-border:        #e2e8f0;
+      --clr-error:         #ef4444;
+      --clr-error-bg:      #fef2f2;
+      --clr-error-border:  #fca5a5;
+
+      --radius: 8px;
+      --font:   'Inter', system-ui, -apple-system, sans-serif;
+      --ease:   0.18s ease;
+    }
+
+    /* ================================================================
+       RESET MINIMAL
+       ================================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font);
+      color: var(--clr-dark);
+      min-height: 100vh;
+    }
+
+    /* ================================================================
+       MISE EN PAGE : deux colonnes côte à côte
+       55 % image | 45 % formulaire
+       ================================================================ */
+    .login-page {
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      min-height: 100vh;
+    }
+
+    /* ================================================================
+       PANNEAU GAUCHE — image décorative
+       L'image est en ::before avec opacité réduite ;
+       le dégradé sombre en ::after garantit la lisibilité du texte.
+       ================================================================ */
+    .panel-visual {
+      position: relative;
+      overflow: hidden;
+      background-color: var(--clr-dark); /* fallback si login.jpg ne charge pas */
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('../assets/images/login.jpg') center / cover no-repeat;
+        opacity: 0.55;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          145deg,
+          rgba(15, 23, 42, 0.90) 0%,
+          rgba(37, 99, 235, 0.28) 100%
+        );
+      }
+
+      /* Le contenu passe au-dessus des deux pseudo-éléments */
+      & .panel-visual__inner {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3rem;
+        color: var(--clr-white);
+
+        /* --- Logo ----------------------------------------------- */
+        & .brand {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+
+          & .brand__icon {
+            width: 38px;
+            height: 38px;
+            background: var(--clr-primary);
+            border-radius: var(--radius);
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+          }
+
+          & .brand__name {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+          }
+        }
+
+        /* --- Accroche centrale ---------------------------------- */
+        & .tagline {
+          & h1 {
+            font-size: clamp(1.75rem, 2.8vw, 2.4rem);
+            font-weight: 700;
+            line-height: 1.22;
+            letter-spacing: -0.025em;
+            margin-bottom: 1rem;
+          }
+
+          & p {
+            font-size: 0.975rem;
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.60);
+            max-width: 36ch;
+          }
+        }
+
+        /* --- Copyright ----------------------------------------- */
+        & .panel-footer {
+          font-size: 0.75rem;
+          color: rgba(255, 255, 255, 0.30);
+        }
+      }
+    }
+
+    /* ================================================================
+       PANNEAU DROIT — formulaire de connexion
+       ================================================================ */
+    .panel-form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: var(--clr-white);
+
+      & .form-box {
+        width: 100%;
+        max-width: 370px;
+
+        /* --- En-tête du formulaire ------------------------------ */
+        & .form-heading {
+          margin-bottom: 2rem;
+
+          & h2 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.35rem;
+          }
+
+          & p {
+            font-size: 0.875rem;
+            color: var(--clr-muted);
+          }
+        }
+      }
+    }
+
+    /* ================================================================
+       ALERTE ERREUR
+       Masquée par défaut ; JS ajoute .is-visible pour l'afficher
+       avec une animation d'entrée.
+       ================================================================ */
+    .alert-error {
+      display: none;
+      gap: 0.5rem;
+      align-items: flex-start;
+      background: var(--clr-error-bg);
+      color: var(--clr-error);
+      border: 1px solid var(--clr-error-border);
+      border-radius: var(--radius);
+      padding: 0.8rem 1rem;
+      font-size: 0.84rem;
+      margin-bottom: 1.25rem;
+
+      &.is-visible {
+        display: flex;
+        animation: slide-down 0.2s ease;
+      }
+
+      & svg { flex-shrink: 0; margin-top: 1px; }
+    }
+
+    @keyframes slide-down {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+
+    /* ================================================================
+       CHAMPS DE FORMULAIRE
+       ================================================================ */
+    .field {
+      margin-bottom: 1.125rem;
+
+      & label {
+        display: block;
+        font-size: 0.84rem;
+        font-weight: 500;
+        margin-bottom: 0.4rem;
+      }
+
+      & .input-wrap {
+        position: relative;
+
+        & input {
+          display: block;
+          width: 100%;
+          height: 44px;
+          padding: 0 2.8rem 0 0.85rem;
+          border: 1.5px solid var(--clr-border);
+          border-radius: var(--radius);
+          font-family: var(--font);
+          font-size: 0.9rem;
+          color: var(--clr-dark);
+          background: var(--clr-white);
+          outline: none;
+          transition: border-color var(--ease), box-shadow var(--ease);
+
+          &::placeholder { color: #c0ccd8; }
+
+          &:focus {
+            border-color: var(--clr-primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+          }
+        }
+
+        /* Icône décorative (email) — non interactive */
+        & .field-icon {
+          position: absolute;
+          right: 0.85rem;
+          top: 50%;
+          transform: translateY(-50%);
+          color: var(--clr-muted);
+          pointer-events: none;
+          display: flex;
+          line-height: 0;
+        }
+
+        /* Bouton toggle afficher/masquer mot de passe */
+        & .field-toggle {
+          position: absolute;
+          right: 0.85rem;
+          top: 50%;
+          transform: translateY(-50%);
+          color: var(--clr-muted);
+          cursor: pointer;
+          background: none;
+          border: none;
+          padding: 0;
+          display: flex;
+          line-height: 0;
+          transition: color var(--ease);
+
+          &:hover { color: var(--clr-primary); }
+        }
+      }
+    }
+
+    /* ================================================================
+       BOUTON CONNEXION
+       État .loading : texte masqué, spinner affiché
+       ================================================================ */
+    .btn-login {
+      width: 100%;
+      height: 44px;
+      margin-top: 0.5rem;
+      background: var(--clr-primary);
+      color: var(--clr-white);
+      border: none;
+      border-radius: var(--radius);
+      font-family: var(--font);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: background var(--ease);
+
+      &:hover:not(:disabled) { background: var(--clr-primary-dark); }
+
+      &:disabled {
+        opacity: 0.65;
+        cursor: not-allowed;
+      }
+
+      & .spinner {
+        width: 16px;
+        height: 16px;
+        border: 2px solid rgba(255, 255, 255, 0.30);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: spin 0.65s linear infinite;
+        display: none; /* affiché par JS quand .loading est présent */
+      }
+
+      &.loading .spinner  { display: block; }
+      &.loading .btn-text { display: none;  }
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+  <div class="login-page">
+
+    <!-- ================================================================
+         PANNEAU GAUCHE — image + texte d'accroche
+         ================================================================ -->
+    <div class="panel-visual">
+      <div class="panel-visual__inner">
+
+        <div class="brand">
+          <div class="brand__icon">P</div>
+          <span class="brand__name">Portfolio Admin</span>
+        </div>
+
+        <div class="tagline">
+          <h1>Gérez votre portfolio en toute simplicité</h1>
+          <p>Mettez à jour vos informations, projets, compétences et expériences depuis cet espace sécurisé.</p>
+        </div>
+
+        <p class="panel-footer">© 2025 — Portfolio Personnel</p>
+
+      </div>
+    </div>
+
+    <!-- ================================================================
+         PANNEAU DROIT — formulaire de connexion
+         ================================================================ -->
+    <div class="panel-form">
+      <div class="form-box">
+
+        <div class="form-heading">
+          <h2>Espace Administrateur</h2>
+          <p>Connectez-vous pour accéder au tableau de bord</p>
+        </div>
+
+        <!-- Alerte affichée par JS si l'API renvoie une erreur -->
+        <div class="alert-error" id="alert-error" role="alert" aria-live="polite">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+          </svg>
+          <span id="alert-text">Erreur</span>
+        </div>
+
+        <form id="form-login" novalidate>
+
+          <!-- Email -->
+          <div class="field">
+            <label for="email">Adresse e-mail</label>
+            <div class="input-wrap">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="admin@exemple.fr"
+                autocomplete="email"
+                required
+              />
+              <span class="field-icon" aria-hidden="true">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- Mot de passe -->
+          <div class="field">
+            <label for="password">Mot de passe</label>
+            <div class="input-wrap">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="••••••••"
+                autocomplete="current-password"
+                required
+              />
+              <!-- Bouton afficher / masquer — l'icône change via JS -->
+              <button
+                type="button"
+                class="field-toggle"
+                id="btn-toggle-pass"
+                aria-label="Afficher le mot de passe"
+              >
+                <svg id="icon-eye" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-login" id="btn-submit">
+            <span class="spinner" aria-hidden="true"></span>
+            <span class="btn-text">Se connecter</span>
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    /* ================================================================
+       CONFIG
+       Adapter API_BASE selon l'environnement de développement :
+         - Apache XAMPP à la racine du serveur  : '/api'
+         - Apache XAMPP dans un sous-dossier    : '/portfolio/api'
+         - PHP built-in server (port 8000)      : 'http://localhost:8000'
+       ================================================================ */
+    const API_BASE = '/api';
+
+    /* ================================================================
+       REFS DOM
+       Regroupées ici pour éviter les querySelector() dispersés.
+       ================================================================ */
+    const formLogin    = document.getElementById('form-login');
+    const inputEmail   = document.getElementById('email');
+    const inputPass    = document.getElementById('password');
+    const btnSubmit    = document.getElementById('btn-submit');
+    const btnToggle    = document.getElementById('btn-toggle-pass');
+    const alertBox     = document.getElementById('alert-error');
+    const alertText    = document.getElementById('alert-text');
+    const iconEye      = document.getElementById('icon-eye');
+
+    /* ================================================================
+       VÉRIFICATION SESSION EXISTANTE
+       Le cookie jwt_token est HttpOnly → JS ne peut pas le lire directement.
+       On interroge /api/auth/me : si 200, l'utilisateur est déjà connecté.
+       ================================================================ */
+    (async function checkSession() {
+      try {
+        const res = await fetch(`${API_BASE}/auth/me`, {
+          credentials: 'include', // envoie le cookie jwt_token s'il existe
+        });
+        if (res.ok) {
+          // Session active → rediriger directement vers le dashboard
+          window.location.replace('dashboard.html');
+        }
+      } catch {
+        // Serveur injoignable ou pas de session → rester sur la page login
+      }
+    })();
+
+    /* ================================================================
+       TOGGLE VISIBILITÉ MOT DE PASSE
+       ================================================================ */
+    btnToggle.addEventListener('click', () => {
+      const isHidden = inputPass.type === 'password';
+      inputPass.type = isHidden ? 'text' : 'password';
+      btnToggle.setAttribute('aria-label', isHidden ? 'Masquer le mot de passe' : 'Afficher le mot de passe');
+
+      /* SVG : oeil ouvert (mot de passe masqué) ↔ oeil barré (mot de passe visible) */
+      iconEye.innerHTML = isHidden
+        ? `<path stroke-linecap="round" stroke-linejoin="round"
+             d="M13.875 18.825A10.05 10.05 0 0112 19c-4.477 0-8.268-2.943-9.542-7
+                a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243
+                M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532
+                l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5
+                c4.477 0 8.268 2.943 9.542 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/>`
+        : `<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+           <path stroke-linecap="round" stroke-linejoin="round"
+             d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7
+                -1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>`;
+    });
+
+    /* ================================================================
+       HELPERS ALERTE & LOADING
+       ================================================================ */
+    function showError(msg) {
+      alertText.textContent = msg;
+      alertBox.classList.add('is-visible');
+    }
+
+    function hideError() {
+      alertBox.classList.remove('is-visible');
+    }
+
+    function setLoading(on) {
+      btnSubmit.disabled = on;
+      btnSubmit.classList.toggle('loading', on);
+    }
+
+    /* ================================================================
+       SOUMISSION DU FORMULAIRE
+       Envoie { email, password } en JSON.
+       PHP répond en posant le cookie HttpOnly jwt_token (Set-Cookie).
+       Le JS ne touche jamais au token directement.
+       ================================================================ */
+    formLogin.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      hideError();
+
+      const email    = inputEmail.value.trim();
+      const password = inputPass.value;
+
+      if (!email || !password) {
+        showError('Veuillez remplir tous les champs.');
+        return;
+      }
+
+      setLoading(true);
+
+      try {
+        const res = await fetch(`${API_BASE}/auth/login`, {
+          method:      'POST',
+          credentials: 'include', // indispensable pour que le navigateur stocke le cookie retourné
+          headers:     { 'Content-Type': 'application/json' },
+          body:        JSON.stringify({ email, password }),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok || !data.success) {
+          showError(data.message ?? 'Identifiants incorrects.');
+          return;
+        }
+
+        // Connexion réussie : le cookie jwt_token a été posé côté serveur.
+        // Redirection vers le dashboard — toutes les requêtes suivantes
+        // enverront automatiquement ce cookie.
+        window.location.href = 'dashboard.html';
+
+      } catch (err) {
+        showError('Impossible de joindre le serveur. Vérifiez que l\'API est démarrée.');
+        console.error('[Login] Erreur réseau :', err);
+      } finally {
+        setLoading(false);
+      }
+    });
+  </script>
+
+</body>
+</html>

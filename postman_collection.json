@@ -1,0 +1,611 @@
+{
+  "info": {
+    "name": "Portfolio API",
+    "_postman_id": "portfolio-api-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:8000/api" },
+    { "key": "token",    "value": "" }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+  },
+  "item": [
+
+    {
+      "name": "1. Auth",
+      "item": [
+        {
+          "name": "Login",
+          "event": [{
+            "listen": "test",
+            "script": {
+              "exec": [
+                "var json = pm.response.json();",
+                "if (json.data && json.data.token) {",
+                "  pm.collectionVariables.set('token', json.data.token);",
+                "  console.log('Token sauvegardé automatiquement');",
+                "}"
+              ]
+            }
+          }],
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/auth/login",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@portfolio.test\",\n  \"password\": \"admin123\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Me (profil connecté)",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/auth/me"
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "2. Catégorie Compétences",
+      "description": "Table: categorie_competences — NOT NULL: name",
+      "item": [
+        {
+          "name": "Créer",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/categorie-competences",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Frontend\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste",
+          "request": { "method": "GET", "url": "{{base_url}}/categorie-competences" }
+        },
+        {
+          "name": "Une catégorie",
+          "request": { "method": "GET", "url": "{{base_url}}/categorie-competences/1" }
+        },
+        {
+          "name": "Modifier",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/categorie-competences/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Frontend & UI\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Supprimer",
+          "request": { "method": "DELETE", "url": "{{base_url}}/categorie-competences/1" }
+        }
+      ]
+    },
+
+    {
+      "name": "3. Compétences",
+      "description": "Table: competences — NOT NULL: categorie_id | nullable: pourcentage (0-100) — Requiert: categorie_competences id=1",
+      "item": [
+        {
+          "name": "Créer",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/competences",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"categorie_id\": 1,\n  \"pourcentage\": 80\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste",
+          "request": { "method": "GET", "url": "{{base_url}}/competences" }
+        },
+        {
+          "name": "Une compétence",
+          "request": { "method": "GET", "url": "{{base_url}}/competences/1" }
+        },
+        {
+          "name": "Modifier",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/competences/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"categorie_id\": 1,\n  \"pourcentage\": 90\n}"
+            }
+          }
+        },
+        {
+          "name": "Supprimer",
+          "request": { "method": "DELETE", "url": "{{base_url}}/competences/1" }
+        }
+      ]
+    },
+
+    {
+      "name": "4. Langages",
+      "description": "Table: langages — NOT NULL: name | nullable: icon",
+      "item": [
+        {
+          "name": "Créer",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/langages",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"JavaScript\",\n  \"icon\": \"js.svg\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste",
+          "request": { "method": "GET", "url": "{{base_url}}/langages" }
+        },
+        {
+          "name": "Un langage",
+          "request": { "method": "GET", "url": "{{base_url}}/langages/1" }
+        },
+        {
+          "name": "Modifier",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/langages/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"JavaScript ES6\",\n  \"icon\": \"js-es6.svg\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Supprimer",
+          "request": { "method": "DELETE", "url": "{{base_url}}/langages/1" }
+        }
+      ]
+    },
+
+    {
+      "name": "5. Scolarité",
+      "description": "Table: scolarite — NOT NULL: intitule, niveau, etablissement, ville, date_debut | nullable: description, date_fin",
+      "item": [
+        {
+          "name": "Créer",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/scolarite",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"intitule\": \"BUT Informatique\",\n  \"niveau\": \"Bac+3\",\n  \"etablissement\": \"IUT de Paris\",\n  \"ville\": \"Paris\",\n  \"date_debut\": \"2022-09-01\",\n  \"date_fin\": \"2025-06-30\",\n  \"description\": \"Formation en développement web.\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste",
+          "request": { "method": "GET", "url": "{{base_url}}/scolarite" }
+        },
+        {
+          "name": "Une scolarité",
+          "request": { "method": "GET", "url": "{{base_url}}/scolarite/1" }
+        },
+        {
+          "name": "Modifier",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/scolarite/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"intitule\": \"BUT Informatique\",\n  \"niveau\": \"Bac+3\",\n  \"etablissement\": \"IUT de Paris\",\n  \"ville\": \"Paris\",\n  \"date_debut\": \"2022-09-01\",\n  \"date_fin\": \"2025-06-30\",\n  \"description\": \"Description mise à jour.\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Supprimer",
+          "request": { "method": "DELETE", "url": "{{base_url}}/scolarite/1" }
+        }
+      ]
+    },
+
+    {
+      "name": "6. Projets",
+      "description": "Table: projet — NOT NULL: titre, description, date_debut | nullable: image_description, difficulte, lien, date_fin",
+      "item": [
+        {
+          "name": "Créer",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/projets",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titre\": \"Portfolio Fullstack\",\n  \"description\": \"Un portfolio réalisé avec PHP et React.\",\n  \"date_debut\": \"2024-01-01\",\n  \"date_fin\": \"2024-06-01\",\n  \"image_description\": \"apercu.jpg\",\n  \"difficulte\": \"Intermédiaire\",\n  \"lien\": \"https://github.com/exemple/portfolio\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste",
+          "request": { "method": "GET", "url": "{{base_url}}/projets" }
+        },
+        {
+          "name": "Un projet",
+          "request": { "method": "GET", "url": "{{base_url}}/projets/1" }
+        },
+        {
+          "name": "Modifier",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/projets/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titre\": \"Portfolio Fullstack v2\",\n  \"description\": \"Version mise à jour.\",\n  \"date_debut\": \"2024-01-01\",\n  \"date_fin\": null,\n  \"image_description\": \"apercu2.jpg\",\n  \"difficulte\": \"Avancé\",\n  \"lien\": \"https://github.com/exemple/portfolio\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Supprimer",
+          "request": { "method": "DELETE", "url": "{{base_url}}/projets/1" }
+        }
+      ]
+    },
+
+    {
+      "name": "7. Carrières Visées",
+      "description": "Table: carriere_visee — NOT NULL: intitule, description | nullable: interet",
+      "item": [
+        {
+          "name": "Créer",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/carrieres",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"intitule\": \"Développeur Fullstack\",\n  \"description\": \"Je vise un poste de développeur fullstack PHP/React.\",\n  \"interet\": \"Architecture logicielle, API REST, DevOps\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste",
+          "request": { "method": "GET", "url": "{{base_url}}/carrieres" }
+        },
+        {
+          "name": "Une carrière",
+          "request": { "method": "GET", "url": "{{base_url}}/carrieres/1" }
+        },
+        {
+          "name": "Modifier",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/carrieres/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"intitule\": \"Développeur Backend\",\n  \"description\": \"Description mise à jour.\",\n  \"interet\": \"API, Sécurité\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Supprimer",
+          "request": { "method": "DELETE", "url": "{{base_url}}/carrieres/1" }
+        }
+      ]
+    },
+
+    {
+      "name": "8. Informations",
+      "description": "Table: informations — NOT NULL: nom, prenom, description | nullable: telephone, avatar",
+      "item": [
+        {
+          "name": "Créer",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/informations",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Mehiaoui\",\n  \"prenom\": \"Mohamed\",\n  \"description\": \"Développeur web fullstack passionné.\",\n  \"telephone\": \"0612345678\",\n  \"avatar\": \"avatar.jpg\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste",
+          "request": { "method": "GET", "url": "{{base_url}}/informations" }
+        },
+        {
+          "name": "Une information",
+          "request": { "method": "GET", "url": "{{base_url}}/informations/1" }
+        },
+        {
+          "name": "Modifier",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/informations/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Mehiaoui\",\n  \"prenom\": \"Mohamed\",\n  \"description\": \"Description mise à jour.\",\n  \"telephone\": \"0699999999\",\n  \"avatar\": \"avatar2.jpg\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Supprimer",
+          "request": { "method": "DELETE", "url": "{{base_url}}/informations/1" }
+        }
+      ]
+    },
+
+    {
+      "name": "9. Expériences Pro",
+      "description": "Table: experience_pro — NOT NULL: intitule, entreprise, ville, date_debut | nullable: description, date_fin, type_contrat",
+      "item": [
+        {
+          "name": "Créer",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/experiences",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"intitule\": \"Développeur web junior\",\n  \"entreprise\": \"Acme Corp\",\n  \"ville\": \"Lyon\",\n  \"date_debut\": \"2023-06-01\",\n  \"date_fin\": \"2023-08-31\",\n  \"description\": \"Développement de fonctionnalités PHP.\",\n  \"type_contrat\": \"Stage\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste",
+          "request": { "method": "GET", "url": "{{base_url}}/experiences" }
+        },
+        {
+          "name": "Une expérience",
+          "request": { "method": "GET", "url": "{{base_url}}/experiences/1" }
+        },
+        {
+          "name": "Modifier",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/experiences/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"intitule\": \"Développeur web\",\n  \"entreprise\": \"Acme Corp\",\n  \"ville\": \"Lyon\",\n  \"date_debut\": \"2023-06-01\",\n  \"date_fin\": null,\n  \"description\": \"Description mise à jour.\",\n  \"type_contrat\": \"CDI\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Supprimer",
+          "request": { "method": "DELETE", "url": "{{base_url}}/experiences/1" }
+        }
+      ]
+    },
+
+    {
+      "name": "10. Modules",
+      "description": "Table: module — NOT NULL: scolarite_id, intitule, niveau | nullable: description — Requiert: scolarite id=1",
+      "item": [
+        {
+          "name": "Créer",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/modules",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"scolarite_id\": 1,\n  \"intitule\": \"Développement Web\",\n  \"niveau\": \"Semestre 3\",\n  \"description\": \"PHP, HTML, CSS, JS\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste",
+          "request": { "method": "GET", "url": "{{base_url}}/modules" }
+        },
+        {
+          "name": "Un module",
+          "request": { "method": "GET", "url": "{{base_url}}/modules/1" }
+        },
+        {
+          "name": "Modifier",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/modules/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"scolarite_id\": 1,\n  \"intitule\": \"Développement Web Avancé\",\n  \"niveau\": \"Semestre 4\",\n  \"description\": \"Laravel, React\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Supprimer",
+          "request": { "method": "DELETE", "url": "{{base_url}}/modules/1" }
+        }
+      ]
+    },
+
+    {
+      "name": "11. Images Projet",
+      "description": "Table: image_projet — NOT NULL: projet_id, image_url, ordre | nullable: legende — Requiert: projet id=1",
+      "item": [
+        {
+          "name": "Créer",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/images-projet",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"projet_id\": 1,\n  \"image_url\": \"screenshots/home.jpg\",\n  \"ordre\": 1,\n  \"legende\": \"Page d'accueil\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste",
+          "request": { "method": "GET", "url": "{{base_url}}/images-projet" }
+        },
+        {
+          "name": "Une image",
+          "request": { "method": "GET", "url": "{{base_url}}/images-projet/1" }
+        },
+        {
+          "name": "Modifier",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/images-projet/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"projet_id\": 1,\n  \"image_url\": \"screenshots/home_v2.jpg\",\n  \"ordre\": 1,\n  \"legende\": \"Page d'accueil v2\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Supprimer",
+          "request": { "method": "DELETE", "url": "{{base_url}}/images-projet/1" }
+        }
+      ]
+    },
+
+    {
+      "name": "12. Module-Compétence (N-N)",
+      "description": "Table: module_competence — NOT NULL: module_id, competence_id — Requiert: module id=1 + competence id=1",
+      "item": [
+        {
+          "name": "Attacher",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/module-competence",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"module_id\": 1,\n  \"competence_id\": 1\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste",
+          "request": { "method": "GET", "url": "{{base_url}}/module-competence" }
+        },
+        {
+          "name": "Une liaison",
+          "request": { "method": "GET", "url": "{{base_url}}/module-competence/1" }
+        },
+        {
+          "name": "Détacher",
+          "request": { "method": "DELETE", "url": "{{base_url}}/module-competence/1" }
+        }
+      ]
+    },
+
+    {
+      "name": "13. Projet-Langage (N-N)",
+      "description": "Table: projet_langage — NOT NULL: projet_id, langage_id — Requiert: projet id=1 + langage id=1",
+      "item": [
+        {
+          "name": "Attacher",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/projet-langage",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"projet_id\": 1,\n  \"langage_id\": 1\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste",
+          "request": { "method": "GET", "url": "{{base_url}}/projet-langage" }
+        },
+        {
+          "name": "Une liaison",
+          "request": { "method": "GET", "url": "{{base_url}}/projet-langage/1" }
+        },
+        {
+          "name": "Détacher",
+          "request": { "method": "DELETE", "url": "{{base_url}}/projet-langage/1" }
+        }
+      ]
+    },
+
+    {
+      "name": "14. Carrière-Compétence (N-N)",
+      "description": "Table: carriere_competence — NOT NULL: carriere_id, competence_id — Requiert: carriere_visee id=1 + competence id=1",
+      "item": [
+        {
+          "name": "Attacher",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/carriere-competence",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"carriere_id\": 1,\n  \"competence_id\": 1\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste",
+          "request": { "method": "GET", "url": "{{base_url}}/carriere-competence" }
+        },
+        {
+          "name": "Une liaison",
+          "request": { "method": "GET", "url": "{{base_url}}/carriere-competence/1" }
+        },
+        {
+          "name": "Détacher",
+          "request": { "method": "DELETE", "url": "{{base_url}}/carriere-competence/1" }
+        }
+      ]
+    },
+
+    {
+      "name": "15. Visites",
+      "description": "Table: visites — NOT NULL: ip_address_hash, page | nullable: user_agent, referrer | visited_at auto",
+      "item": [
+        {
+          "name": "Enregistrer une visite (public)",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "url": "{{base_url}}/visites",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ip_address_hash\": \"abc123hashedxyz\",\n  \"page\": \"/projets\",\n  \"user_agent\": \"Mozilla/5.0\",\n  \"referrer\": \"https://google.com\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Liste (admin)",
+          "request": { "method": "GET", "url": "{{base_url}}/visites" }
+        },
+        {
+          "name": "Une visite (admin)",
+          "request": { "method": "GET", "url": "{{base_url}}/visites/1" }
+        },
+        {
+          "name": "Supprimer (admin)",
+          "request": { "method": "DELETE", "url": "{{base_url}}/visites/1" }
+        }
+      ]
+    }
+
+  ]
+}
