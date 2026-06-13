@@ -1,0 +1,16 @@
+[2026-06-13 12:47:08] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 21:19:39] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 21:19:53] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 22:12:10] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 22:12:30] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 22:12:37] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 22:13:05] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 22:14:18] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 22:17:56] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 22:18:10] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 22:35:20] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 22:35:55] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 23:17:00] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 23:18:06] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 23:31:45] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
+[2026-06-13 23:32:03] [ERROR] [422] Champs obligatoires manquants : ip_address_hash, page | POST /api/visites | IP: ::1 | From: Router.php:107
