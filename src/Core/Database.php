@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../../config/config.php';
+require_once __DIR__ . '/Exceptions/DatabaseException.php';
 
 class Database
 {
@@ -26,7 +27,7 @@ class Database
                 // activer PRAGMA foreign_keys = ON
                 self::$db->exec('PRAGMA foreign_keys = ON');
             } catch (PDOException $e) {
-                die("Connection failed: " . $e->getMessage());
+                throw new DatabaseException("Connexion base de données échouée : " . $e->getMessage());
             }
         }
         return self::$db;
