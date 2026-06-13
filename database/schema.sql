@@ -91,18 +91,21 @@ CREATE TABLE IF NOT EXISTS scolarite (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Projet : titre, description, image_description, difficulté, lien, date_debut, date_fin, user_id --
+-- Projet : titre, description, image_description, difficulté, lien, categorie_id, date_debut, date_fin, user_id --
 CREATE TABLE IF NOT EXISTS projet (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL,
     titre VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
+    but TEXT,
     image_description VARCHAR(255),
     difficulte VARCHAR(50),
     lien VARCHAR(255),
+    categorie_id INTEGER,
     date_debut DATE NOT NULL,
     date_fin DATE,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (categorie_id) REFERENCES categorie_competences(id) ON DELETE SET NULL
 );
 
 -- Carrière_visée : intitule, description, interet, user_id --

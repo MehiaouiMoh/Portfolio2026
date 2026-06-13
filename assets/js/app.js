@@ -95,6 +95,8 @@ function getProjectImg(titre) {
    COMPÉTENCES — chargement + filtres
    ================================================================ */
 async function loadCompetences() {
+  if (!document.getElementById('competences-filters')) return;
+
   const [categories, langages, frameworks, logiciels, competences] = await Promise.all([
     apiFetch('categorie-competences'),
     apiFetch('langages'),
@@ -159,10 +161,11 @@ async function loadCompetences() {
    PROJETS — chargement + layout éclaté
    ================================================================ */
 async function loadProjets() {
+  const stage = document.getElementById('projets-stage');
+  if (!stage) return;
+
   const projets = await apiFetch('projets');
   if (!projets || !projets.length) return;
-
-  const stage  = document.getElementById('projets-stage');
   const center = stage.querySelector('.projets-center');
 
   /* On affiche max 5 cards dans le layout éclaté */
@@ -186,10 +189,11 @@ async function loadProjets() {
    PARCOURS — 2 dernières scolarités
    ================================================================ */
 async function loadParcours() {
+  const container = document.getElementById('parcours-cards');
+  if (!container) return;
+
   const scolarites = await apiFetch('scolarite');
   if (!scolarites || !scolarites.length) return;
-
-  const container = document.getElementById('parcours-cards');
   const slots = container.querySelectorAll('.parcours-card');
   const latest = scolarites.slice(0, 2);
 
