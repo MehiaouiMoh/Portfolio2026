@@ -1,5 +1,5 @@
 <?php
-//Definir la classe Response pour gérer les réponses HTTP
+require_once __DIR__ . '/Logger.php';
 
 class Response
 {
@@ -32,12 +32,11 @@ class Response
     //Reponse error
     public static function error(string $message, int $statusCode = 400): void
     {
-        // Construire un array
+        Logger::error($message, $statusCode);
         $response = [
             'success' => false,
             'message' => $message
         ];
-        // faire un self::json pour envoyer la réponse
         self::json($response, $statusCode);
     }
 
