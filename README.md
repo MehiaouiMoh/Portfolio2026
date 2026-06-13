@@ -19,4 +19,4 @@ API REST backend d'un portfolio personnel, construite en PHP natif sans framewor
 ---
 
 ## Accès au site :
-Le portfolio est disponible à l'adresse suivante : [here](https://mehiaoui-lab.fr)
+Le portfolio est disponible à l'adresse suivante : [https://mehiaoui-lab.fr](https://mehiaoui-lab.fr)
