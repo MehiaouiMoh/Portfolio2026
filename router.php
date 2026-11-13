@@ -8,8 +8,6 @@
  *
  * Usage (depuis la racine du projet) :
  *   php -S localhost:8000 router.php
- *
- * Puis ouvrir : http://localhost:8000/admin/login.html
  */
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);

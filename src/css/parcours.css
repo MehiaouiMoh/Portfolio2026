@@ -1,0 +1,372 @@
+/* ── CAROUSEL HERO ── */
+    .ph-hero {
+      padding-top: var(--nav-h);
+      background: var(--clr-surface);
+    }
+
+    .ph-top {
+      max-width: var(--page-max);
+      margin: 0 auto;
+      padding: 40px var(--page-pad) 28px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .ph-title {
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--clr-text);
+      max-width: 480px;
+    }
+
+    .ph-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      flex-shrink: 0;
+    }
+
+    .ph-tab {
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: var(--font);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+
+    .ph-tab--inactive {
+      background: var(--clr-dark);
+      color: #fff;
+    }
+
+    .ph-tab--active {
+      background: var(--clr-accent);
+      color: #fff;
+      transform: none;
+    }
+
+    .ph-tab--inactive:hover {
+      background: #333;
+    }
+
+    .ph-banner {
+      max-width: var(--page-max);
+      margin: 0 auto;
+      padding: 0 var(--page-pad) 48px;
+    }
+
+    .ph-img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      display: block;
+      background: var(--clr-border);
+    }
+
+    .ph-img-placeholder {
+      width: 100%;
+      height: 380px;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ph-img-placeholder svg {
+      opacity: 0.25;
+    }
+
+    /* ── SCHOOL INTRO ── */
+    .school-intro {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--clr-border);
+    }
+
+    .school-intro-inner {
+      max-width: var(--page-max);
+      margin: 0 auto;
+      padding: 0 var(--page-pad);
+    }
+
+    .si-name {
+      font-size: clamp(20px, 2.5vw, 28px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 6px;
+    }
+
+    .si-meta {
+      font-size: 14px;
+      color: var(--clr-muted);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+
+    .si-desc {
+      font-size: 15px;
+      color: var(--clr-muted);
+      line-height: 1.8;
+      max-width: 720px;
+    }
+
+    /* ── MA FORMATION ACTUELLE ── */
+    .formation-actuelle {
+      padding: 64px 0 32px;
+    }
+
+    .fa-inner {
+      max-width: var(--page-max);
+      margin: 0 auto;
+      padding: 0 var(--page-pad);
+    }
+
+    .fa-heading {
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    .fa-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--clr-border);
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      overflow: hidden;
+      min-height: 160px;
+    }
+
+    .fa-card-left {
+      background: linear-gradient(145deg, #3b5bdb 0%, #1971c2 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 28px 20px;
+    }
+
+    .fa-badge-encours {
+      background: #40c057;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+
+    .fa-card-right {
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .fa-dates {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--clr-accent);
+      letter-spacing: 0.04em;
+    }
+
+    .fa-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--clr-accent);
+      background: var(--clr-accent-soft);
+      padding: 3px 10px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      align-self: flex-start;
+    }
+
+    .fa-title {
+      font-size: clamp(16px, 1.8vw, 20px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--clr-text);
+      line-height: 1.25;
+    }
+
+    .fa-desc {
+      font-size: 13px;
+      color: var(--clr-muted);
+      line-height: 1.65;
+      max-width: 560px;
+    }
+
+    .fa-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--clr-accent);
+      margin-top: 4px;
+      transition: gap 0.18s;
+    }
+
+    .fa-link:hover { gap: 10px; }
+
+    /* ── MES ANCIENNES FORMATIONS ── */
+    .anciennes-formations {
+      padding: 32px 0 96px;
+    }
+
+    .af-inner {
+      max-width: var(--page-max);
+      margin: 0 auto;
+      padding: 0 var(--page-pad);
+    }
+
+    .af-heading {
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .af-sub {
+      font-size: 13px;
+      color: var(--clr-muted);
+      margin-bottom: 28px;
+    }
+
+    .af-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .af-card {
+      background: #fff;
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s;
+    }
+
+    .af-card:hover { box-shadow: var(--shadow-md); }
+
+    .af-card-top {
+      height: 80px;
+      background: var(--clr-surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .af-card-body {
+      padding: 18px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .af-card-dates {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--clr-muted);
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .af-card-dates span {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: 4px;
+      padding: 2px 8px;
+    }
+
+    .af-card-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--clr-accent);
+      background: var(--clr-accent-soft);
+      padding: 2px 9px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      align-self: flex-start;
+    }
+
+    .af-card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--clr-text);
+      line-height: 1.3;
+    }
+
+    .af-card-school {
+      font-size: 12px;
+      color: var(--clr-muted);
+    }
+
+    .af-card-btn {
+      margin-top: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--clr-muted);
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: 50px;
+      padding: 6px 14px;
+      text-align: center;
+      cursor: default;
+      letter-spacing: 0.02em;
+      align-self: flex-start;
+    }
+
+    /* Skeleton loading */
+    .ph-img.skeleton,
+    .fa-card.skeleton,
+    .af-card.skeleton {
+      background: linear-gradient(90deg, #ebebeb 25%, #e0e0e0 50%, #ebebeb 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.6s infinite;
+      border: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .ph-top {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 28px;
+      }
+
+      .ph-tabs { justify-content: flex-start; }
+
+      .ph-img { height: 220px; }
+
+      .fa-card { grid-template-columns: 1fr; }
+
+      .fa-card-left { flex-direction: row; height: 60px; padding: 0 24px; }
+
+      .af-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .af-grid { grid-template-columns: 1fr; }
+    }
