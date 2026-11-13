@@ -598,7 +598,7 @@
               ${tag ? `<span class="af-card-tag">${esc(tag)}</span>` : ''}
               <p class="af-card-title">${esc(shortTitle)}</p>
               <p class="af-card-school">${esc(s.etablissement)} · ${esc(s.ville)}</p>
-              <span class="af-card-btn">Bientôt disponible</span>
+              ${s.description ? `<a href="formation-details.html?id=${s.id}" class="af-card-btn">Voir la formation</a>` : `<span class="af-card-btn">Bientôt disponible</span>`}
             </div>
           </div>`;
       }).join('');
