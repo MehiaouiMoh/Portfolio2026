@@ -134,6 +134,7 @@
         const shortTitle = s.niveau + (s.intitule.includes('Réalisation') ? ' — Informatique' : '');
 
         const aDuContenu = s.modules_count > 0;
+        console.log(`Formation "${s.intitule}" (${s.id}) a du contenu : ${aDuContenu}`);
 
         let icon, btn;
         if (aDuContenu) {

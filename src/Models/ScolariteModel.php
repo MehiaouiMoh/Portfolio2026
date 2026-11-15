@@ -28,14 +28,14 @@ class ScolariteModel
     //Méthode pour récupérer toutes les scolarités : findAll()
     public function findAll(): array
     {
-       $stmt = $this->pdo->query("SELECT * FROM scolarite ORDER BY id DESC");
+       $stmt = $this->pdo->query("SELECT s.*, (SELECT COUNT(*) FROM module m WHERE m.scolarite_id = s.id) AS modules_count FROM scolarite s ORDER BY s.id DESC");
        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     //Méthode pour récupérer une scolarité par son id : findById($id)
     public function findById(int $id): ?array
     {
-        $stmt = $this->pdo->prepare("SELECT s*, s.*, (SELECT COUNT(*) FROM module m WHERE m.scolarite_id = s.id) AS modules_count FROM scolarite s WHERE s.id = ?");
+        $stmt = $this->pdo->prepare("SELECT * FROM scolarite  WHERE id = ?");
         $stmt->execute([$id]);
         return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
     }
