@@ -1,6 +1,6 @@
 ---
 deployment:
     tasks:
-        - export DEPLOYPATH=/home/sc1duga0395/mehiaoui-lab.fr/
+        - export DEPLOYPATH=/home/sc13duga0395/mehiaoui-lab.fr/
         - /bin/cp -R * $DEPLOYPATH
         - /bin/cp -R .htaccess $DEPLOYPATH
