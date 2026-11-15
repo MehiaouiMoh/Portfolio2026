@@ -133,20 +133,38 @@
         const tag = tagColor(s.niveau);
         const shortTitle = s.niveau + (s.intitule.includes('Réalisation') ? ' — Informatique' : '');
 
-        return `
-          <div class="af-card">
+        const aDuContenu = s.modules_count > 0;
+
+        let icon, btn;
+        if (aDuContenu) {
+          icon = `
+            <div class="fa-card-left">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M6 16L20 8l14 8-14 8-14-8z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M12 19v8c0 0 3 4 8 4s8-4 8-4v-8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>`;
+          btn = `<a href="formation-details.html?id=${s.id}" class="af-card-btn">Voir la formation</a>`;
+        } else {
+          icon = `
             <div class="af-card-top">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
                 <path d="M4 11L14 5l10 6-10 6-10-6z" stroke="#ccc" stroke-width="1.5" stroke-linejoin="round"/>
                 <path d="M8 13v6s2 3 6 3 6-3 6-3v-6" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
-            </div>
+            </div>`;
+          btn = `<span class="af-card-btn">Bientôt disponible</span>`;
+        }
+
+        return `
+          <div class="af-card">
+            ${icon}
             <div class="af-card-body">
               <div class="af-card-dates">${dateBadge}</div>
               ${tag ? `<span class="af-card-tag">${esc(tag)}</span>` : ''}
               <p class="af-card-title">${esc(shortTitle)}</p>
               <p class="af-card-school">${esc(s.etablissement)} · ${esc(s.ville)}</p>
-              ${s.description ? `<a href="formation-details.html?id=${s.id}" class="af-card-btn">Voir la formation</a>` : `<span class="af-card-btn">Bientôt disponible</span>`}
+              ${btn}
             </div>
           </div>`;
       }).join('');

@@ -35,7 +35,7 @@ class ScolariteModel
     //Méthode pour récupérer une scolarité par son id : findById($id)
     public function findById(int $id): ?array
     {
-        $stmt = $this->pdo->prepare("SELECT * FROM scolarite WHERE id = ?");
+        $stmt = $this->pdo->prepare("SELECT s*, s.*, (SELECT COUNT(*) FROM module m WHERE m.scolarite_id = s.id) AS modules_count FROM scolarite s WHERE s.id = ?");
         $stmt->execute([$id]);
         return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
     }
