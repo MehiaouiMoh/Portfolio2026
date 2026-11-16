@@ -1,0 +1,48 @@
+{
+  "data": [
+    {
+      "categorie_id": 7,
+      "icon": "/../assets/competencesIcones/flutter.jpg",
+      "id": 6,
+      "name": "Flutter",
+      "pourcentage": null
+    },
+    {
+      "categorie_id": 3,
+      "icon": "/../assets/competencesIcones/sql.png",
+      "id": 5,
+      "name": "SQL",
+      "pourcentage": null
+    },
+    {
+      "categorie_id": 2,
+      "icon": "/../assets/competencesIcones/php.png",
+      "id": 4,
+      "name": "PHP",
+      "pourcentage": null
+    },
+    {
+      "categorie_id": 1,
+      "icon": "/../assets/competencesIcones/js.png",
+      "id": 3,
+      "name": "JavaScript",
+      "pourcentage": null
+    },
+    {
+      "categorie_id": 1,
+      "icon": "/../assets/competencesIcones/css.png",
+      "id": 2,
+      "name": "CSS",
+      "pourcentage": null
+    },
+    {
+      "categorie_id": 1,
+      "icon": "/../assets/competencesIcones/html.png",
+      "id": 1,
+      "name": "HTML",
+      "pourcentage": null
+    }
+  ],
+  "message": "Liste des langages",
+  "success": true
+}

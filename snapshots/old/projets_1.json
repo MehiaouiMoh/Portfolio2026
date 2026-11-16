@@ -1,0 +1,18 @@
+{
+  "data": {
+    "but": "Apprendre à mettre en relation un frontend et un backend grâce à des requêtes PHP sur une base de données, afficher les données sur un frontoffice. Créer des actions qui alimentent la base de données, créer des pages dynamiques et s'interroger sur les bonnes pratiques de sécurité web à mettre en place (vérification d'authentification, partage de session, requêtes préparées sur la BDD, protection XSS en nettoyant les champs de formulaire). Apprendre la collaboration en équipe (2 étudiants).",
+    "categorie_id": 9,
+    "categorie_name": "Fullstack",
+    "date_debut": "2024-10-01",
+    "date_fin": "2025-01-06",
+    "description": "Site web fullstack pour une association sportive : présentation du club, réservation de cours et de terrains, espace multimédia (photos/vidéos), inscription à des compétitions, boutique de produits et backoffice membre. Projet en équipe de 2.",
+    "difficulte": "Assez difficile",
+    "id": 1,
+    "image_description": null,
+    "lien": "https://github.com/MehiaouiMoh/VosgesTennisAltitude_Mehiaoui_Gailliegue",
+    "titre": "VosgesTennis",
+    "user_id": 1
+  },
+  "message": "Projet trouvé",
+  "success": true
+}

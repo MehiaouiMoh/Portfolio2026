@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "description": "Lois sur le traitement des données utilisateurs, droit à la propriété intellectuelle sur un travail réalisé.",
+      "id": 14,
+      "module_id": 5,
+      "nom": "Droit du numérique et de la propriété"
+    },
+    {
+      "description": "Découverte des possibilités pour créer une entreprise, monter un business plan, prendre des décisions stratégiques, analyser la concurrence.",
+      "id": 13,
+      "module_id": 5,
+      "nom": "Initiation à l'entrepreneuriat"
+    },
+    {
+      "description": "Créer des scènes avec des objets 3D en Java.",
+      "id": 12,
+      "module_id": 4,
+      "nom": "Synthèse d'images numériques"
+    },
+    {
+      "description": "Développer une application mobile pour gérer les livraisons, optimiser le trajet avec Google Maps, maîtriser les notifications.",
+      "id": 11,
+      "module_id": 4,
+      "nom": "Évolution d'une application existante"
+    },
+    {
+      "description": "Maintenance d'un site existant : alimenter en contenu et en fonctionnalité selon un cahier des charges. Comprendre le code d'un autre développeur.",
+      "id": 10,
+      "module_id": 4,
+      "nom": "Maintenance applicative"
+    },
+    {
+      "description": "Supports de communication, argumentaire de vente cohérent en respectant les typologies client SONCASE.",
+      "id": 9,
+      "module_id": 3,
+      "nom": "Politique de communication"
+    },
+    {
+      "description": "Méthodes agiles Kanban et Scrum, mise en situation de gestion d'équipe, études de cas sur la résolution de conflits.",
+      "id": 8,
+      "module_id": 3,
+      "nom": "Management d'une équipe"
+    },
+    {
+      "description": "Mathématiques : résolution de systèmes de matrices, optimisation, résolution d'inéquations et de convexes.",
+      "id": 7,
+      "module_id": 2,
+      "nom": "Méthodes d'optimisation pour aide à la décision"
+    },
+    {
+      "description": "Création d'une application mobile en Swift génératrice de blagues.",
+      "id": 6,
+      "module_id": 1,
+      "nom": "Développement multiplateforme"
+    },
+    {
+      "description": "Découverte du framework Laravel et création d'une application PetFinder pour signaler des animaux disparus.",
+      "id": 5,
+      "module_id": 1,
+      "nom": "Développement intégré"
+    },
+    {
+      "description": "Création d'un flipper 3D avec Unity et C#.",
+      "id": 4,
+      "module_id": 1,
+      "nom": "Programmation multimédia"
+    },
+    {
+      "description": "Python et machine learning : créer des classes pour l'apprentissage automatique de données.",
+      "id": 3,
+      "module_id": 1,
+      "nom": "Programmation avancée"
+    },
+    {
+      "description": "Résoudre les problèmes liés à la qualité de code, aux tris de données, aux algorithmes de recherche (arbres).",
+      "id": 2,
+      "module_id": 1,
+      "nom": "Qualité algorithmique"
+    },
+    {
+      "description": "Application web fullstack pour gestion de livraison et commandes de paniers pour la collectivité Jardin de Cocagne (SAE).",
+      "id": 1,
+      "module_id": 1,
+      "nom": "Développement avancé"
+    }
+  ],
+  "message": "Liste des enseignements",
+  "success": true
+}

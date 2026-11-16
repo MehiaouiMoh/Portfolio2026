@@ -1,0 +1,51 @@
+{
+  "data": [
+    {
+      "id": 9,
+      "langage_id": 5,
+      "projet_id": 7
+    },
+    {
+      "id": 8,
+      "langage_id": 4,
+      "projet_id": 7
+    },
+    {
+      "id": 7,
+      "langage_id": 5,
+      "projet_id": 3
+    },
+    {
+      "id": 6,
+      "langage_id": 4,
+      "projet_id": 3
+    },
+    {
+      "id": 5,
+      "langage_id": 5,
+      "projet_id": 1
+    },
+    {
+      "id": 4,
+      "langage_id": 4,
+      "projet_id": 1
+    },
+    {
+      "id": 3,
+      "langage_id": 3,
+      "projet_id": 1
+    },
+    {
+      "id": 2,
+      "langage_id": 2,
+      "projet_id": 1
+    },
+    {
+      "id": 1,
+      "langage_id": 1,
+      "projet_id": 1
+    }
+  ],
+  "message": "Liste des liaisons projet/langage",
+  "success": true
+}

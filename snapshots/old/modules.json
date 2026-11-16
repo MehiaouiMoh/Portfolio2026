@@ -1,0 +1,41 @@
+{
+  "data": [
+    {
+      "description": "Initiation à l'entrepreneuriat, droit du numérique et de la propriété.",
+      "id": 5,
+      "intitule": "Collaborer",
+      "niveau": "Semestre 6",
+      "scolarite_id": 5
+    },
+    {
+      "description": "Maintenance applicative, évolution d'application existante, synthèse d'images numériques.",
+      "id": 4,
+      "intitule": "Réaliser un développement d'applications",
+      "niveau": "Semestre 6",
+      "scolarite_id": 5
+    },
+    {
+      "description": "Management d'équipe, méthodes agiles, communication professionnelle.",
+      "id": 3,
+      "intitule": "Travailler dans une équipe informatique",
+      "niveau": "Semestre 5",
+      "scolarite_id": 5
+    },
+    {
+      "description": "Méthodes mathématiques d'optimisation pour l'aide à la décision.",
+      "id": 2,
+      "intitule": "Optimiser des applications informatiques",
+      "niveau": "Semestre 5",
+      "scolarite_id": 5
+    },
+    {
+      "description": "Développement avancé, qualité algorithmique, programmation avancée, multimédia et multiplateforme.",
+      "id": 1,
+      "intitule": "Réaliser un développement d'application",
+      "niveau": "Semestre 5",
+      "scolarite_id": 5
+    }
+  ],
+  "message": "Liste des modules",
+  "success": true
+}
