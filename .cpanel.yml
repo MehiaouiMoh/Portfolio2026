@@ -1,6 +1,13 @@
 ---
 deployment:
-    tasks:
-        - export DEPLOYPATH=/home/sc13duga0395/mehiaoui-lab.fr/
-        - /bin/cp -R * $DEPLOYPATH
-        - /bin/cp -R .htaccess $DEPLOYPATH
+  tasks:
+    - export DEPLOYPATH=/home/sc13duga0395/mehiaoui-lab.fr/
+    # Dossiers nécessaires en production (JAMAIS database/)
+    - /bin/cp -R admin $DEPLOYPATH
+    - /bin/cp -R api $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R src $DEPLOYPATH
+    - /bin/cp -R config $DEPLOYPATH
+    # Fichiers racine
+    - /bin/cp *.html $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
