@@ -241,7 +241,6 @@ async function loadExperiences() {
    INIT
    ================================================================ */
 (async () => {
-  trackVisit();
   await Promise.all([
     loadCompetences(),
     loadProjets(),

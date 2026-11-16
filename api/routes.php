@@ -10,7 +10,6 @@ require_once __DIR__ . '/../src/Controllers/CompetencesController.php';
 require_once __DIR__ . '/../src/Controllers/LangagesController.php';
 require_once __DIR__ . '/../src/Controllers/FrameworksController.php';
 require_once __DIR__ . '/../src/Controllers/LogicielsController.php';
-require_once __DIR__ . '/../src/Controllers/VisitesController.php';
 require_once __DIR__ . '/../src/Controllers/ScolariteController.php';
 require_once __DIR__ . '/../src/Controllers/ProjetsController.php';
 require_once __DIR__ . '/../src/Controllers/CarriereViseeController.php';
