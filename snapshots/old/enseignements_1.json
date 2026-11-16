@@ -1,0 +1,10 @@
+{
+  "data": {
+    "description": "Application web fullstack pour gestion de livraison et commandes de paniers pour la collectivité Jardin de Cocagne (SAE).",
+    "id": 1,
+    "module_id": 1,
+    "nom": "Développement avancé"
+  },
+  "message": "Enseignement trouvé",
+  "success": true
+}

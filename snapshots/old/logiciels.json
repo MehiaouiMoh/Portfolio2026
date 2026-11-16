@@ -1,0 +1,55 @@
+{
+  "data": [
+    {
+      "categorie_id": 8,
+      "icon": null,
+      "id": 7,
+      "name": "Make",
+      "pourcentage": null
+    },
+    {
+      "categorie_id": 6,
+      "icon": "/../assets/competencesIcones/docker.png",
+      "id": 6,
+      "name": "Docker",
+      "pourcentage": null
+    },
+    {
+      "categorie_id": 8,
+      "icon": "/../assets/competencesIcones/n8n.jpg",
+      "id": 5,
+      "name": "n8n",
+      "pourcentage": null
+    },
+    {
+      "categorie_id": 5,
+      "icon": "/../assets/competencesIcones/github.png",
+      "id": 4,
+      "name": "CI/CD GitHub",
+      "pourcentage": null
+    },
+    {
+      "categorie_id": 4,
+      "icon": "/../assets/competencesIcones/figma.jpg",
+      "id": 3,
+      "name": "Figma",
+      "pourcentage": null
+    },
+    {
+      "categorie_id": 3,
+      "icon": "/../assets/competencesIcones/postgresql.png",
+      "id": 2,
+      "name": "PostgreSQL",
+      "pourcentage": null
+    },
+    {
+      "categorie_id": 3,
+      "icon": "/../assets/competencesIcones/phpMyAdmin.jpg",
+      "id": 1,
+      "name": "PhpMyAdmin",
+      "pourcentage": null
+    }
+  ],
+  "message": "Liste des logiciels",
+  "success": true
+}

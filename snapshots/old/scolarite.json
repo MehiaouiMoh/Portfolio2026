@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "date_debut": "2026-09-07",
+      "date_fin": "2028-09-07",
+      "description": "Master centré sur le développement et la mises en place de solutions web et mobiles sécurisées (sécurité du web, programmation bas niveau, DevSecOps, pentesting, informatique pour objet connectés, programmation front-end et back-end)",
+      "etablissement": "IUT Sénart Fontainebleau UPEC",
+      "id": 6,
+      "intitule": "Master Conception Systèmes et cybersecurité",
+      "modules_count": 0,
+      "niveau": "BAC+4",
+      "user_id": 1,
+      "ville": "LieuSaint"
+    },
+    {
+      "date_debut": "2025-09-01",
+      "date_fin": "2026-06-22",
+      "description": "Troisième et dernière année de BUT Informatique, parcours Conception, Développement et Validation d'Applications. Développement avancé, machine learning, Unity, Laravel, mobile, entrepreneuriat.",
+      "etablissement": "IUT Saint-Dié-des-Vosges, Université de Lorraine",
+      "id": 5,
+      "intitule": "BUT Informatique — Réalisation d'applications",
+      "modules_count": 5,
+      "niveau": "BUT 3",
+      "user_id": 1,
+      "ville": "Saint-Dié-des-Vosges"
+    },
+    {
+      "date_debut": "2024-09-01",
+      "date_fin": "2025-06-22",
+      "description": "Deuxième année de BUT Informatique. Approfondissement du développement fullstack, API REST, sécurité web, applications mobiles et déploiement.",
+      "etablissement": "IUT Saint-Dié-des-Vosges, Université de Lorraine",
+      "id": 4,
+      "intitule": "BUT Informatique — Réalisation d'applications",
+      "modules_count": 0,
+      "niveau": "BUT 2",
+      "user_id": 1,
+      "ville": "Saint-Dié-des-Vosges"
+    },
+    {
+      "date_debut": "2023-09-01",
+      "date_fin": "2024-06-22",
+      "description": "Première année de BUT Informatique. Découverte du développement web (HTML, CSS, PHP, SQL), bases de données, algorithmique et travail en équipe.",
+      "etablissement": "IUT Saint-Dié-des-Vosges, Université de Lorraine",
+      "id": 3,
+      "intitule": "BUT Informatique — Réalisation d'applications",
+      "modules_count": 0,
+      "niveau": "BUT 1",
+      "user_id": 1,
+      "ville": "Saint-Dié-des-Vosges"
+    },
+    {
+      "date_debut": "2022-09-05",
+      "date_fin": "2023-06-15",
+      "description": "Deuxième année de licence Électronique, Énergie Électrique, Automatique.",
+      "etablissement": "Sorbonne Université (UPMC)",
+      "id": 2,
+      "intitule": "Licence 2 EEA",
+      "modules_count": 0,
+      "niveau": "Licence 2",
+      "user_id": 1,
+      "ville": "Paris"
+    },
+    {
+      "date_debut": "2019-09-05",
+      "date_fin": "2022-05-15",
+      "description": "Trois ans de licence en électronique. Mathématiques (stats, énergies), électronique analogique et numérique, informatique (C, VHDL). Formation qui a forgé des capacités de raisonnement et de persévérance.",
+      "etablissement": "Sorbonne Université (UPMC)",
+      "id": 1,
+      "intitule": "Licence 1 Électronique, Énergie Électrique",
+      "modules_count": 0,
+      "niveau": "Licence 1",
+      "user_id": 1,
+      "ville": "Paris"
+    }
+  ],
+  "message": "Liste des scolarités",
+  "success": true
+}

@@ -1,0 +1,9 @@
+{
+  "data": {
+    "id": 1,
+    "langage_id": 1,
+    "projet_id": 1
+  },
+  "message": "Liaison projet/langage trouvée",
+  "success": true
+}

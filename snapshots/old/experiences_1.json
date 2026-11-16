@@ -1,0 +1,15 @@
+{
+  "data": {
+    "date_debut": "2026-02-17",
+    "date_fin": "2026-04-19",
+    "description": "Participation à la création d'un système automatisé de gestion de commandes et de clients. Développement de formulaires interactifs WordPress connectés à des scripts PHP. Automatisation d'emails et intégration via webhooks (n8n, Make, Telegram). Traitement de données avec Python, intégration à Odoo/Dolibarr. Mise en œuvre de solutions low-code pour l'automatisation.",
+    "entreprise": "CHR DISTRIB",
+    "id": 1,
+    "intitule": "Assistant développeur web",
+    "type_contrat": "Stage",
+    "user_id": 1,
+    "ville": "Argenteuil"
+  },
+  "message": "Expérience professionnelle trouvée",
+  "success": true
+}

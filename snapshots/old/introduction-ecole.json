@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "description_intro": "450 km de l'île de France, un détachement total de ce que j'ai toujours connu. Un sentiment de vide qui est vite comblé par la passion des applications web et mobiles, ainsi que par un cadre naturel unique, différent des grandes villes. 3 années à consolider un rêve et une passion née de la flamme de la persévérance. 3 années à se forger soi-même moralement et intellectuellement. 3 années d'informatique, en commençant par le HTML, en passant par la construction de bases de données, lié le backend et le frontend avec une API protégée, apprendre la sécurité web, construire des applications mobiles cross-plateforme, déployer avec des tests unitaires automatisés, conteneuriser avec Docker, apprendre de nouveaux langages. L'IUT à taille humaine m'a apporté une certaine proximité que je n'avais pas dans les grandes facs de Paris.",
+      "etablissement": "IUT Saint-Dié-des-Vosges, Université de Lorraine",
+      "formation_intitule": "BUT Informatique — Réalisation d'applications",
+      "formation_niveau": "BUT 3",
+      "id": 1,
+      "image": "assets/images/scolarite/informatique.jpg",
+      "nb_annees": 3,
+      "scolarite_id": 5,
+      "titre_court": "BUT Informatique",
+      "ville": "Saint-Dié-des-Vosges"
+    },
+    {
+      "description_intro": "Trois ans à la Sorbonne, au cœur de Paris, dans l'une des universités les plus reconnues de France. Une formation en électronique, énergie électrique et automatique qui a posé les bases du raisonnement scientifique et de la rigueur analytique. Des mathématiques avancées, de l'électronique analogique et numérique, de l'informatique bas niveau en C et VHDL. Une période fondatrice qui a développé la capacité à résoudre des problèmes complexes et à persévérer face à la difficulté.",
+      "etablissement": "Sorbonne Université (UPMC)",
+      "formation_intitule": "Licence 2 EEA",
+      "formation_niveau": "Licence 2",
+      "id": 2,
+      "image": "assets/images/scolarite/electronic.jpg",
+      "nb_annees": 3,
+      "scolarite_id": 2,
+      "titre_court": "Licence Electronique",
+      "ville": "Paris"
+    }
+  ],
+  "message": "Liste des introductions d'école",
+  "success": true
+}
