@@ -277,3 +277,97 @@
 [2026-11-16 20:40:49] [ERROR] [404] Projet n°99999 introuvable | GET /api/projets/99999 | IP: 127.0.0.1 | From: ProjetsController.php:26
 [16-Nov-2026 20:40:49 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
 [16-Nov-2026 20:40:49 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:10 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:10 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:11 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:12 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:12 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:12 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:12 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:12 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:12 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:12 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:12 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:12 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:12 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:12 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:12 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:13 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[2026-11-17 09:57:14] [ERROR] [404] Image de projet n°1 introuvable | GET /api/images-projet/1 | IP: 127.0.0.1 | From: ImageProjetController.php:27
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:14 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[2026-11-17 09:57:14] [ERROR] [404] Carrière visée n°1 introuvable | GET /api/carrieres/1 | IP: 127.0.0.1 | From: CarriereViseeController.php:26
+[17-Nov-2026 09:57:15 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:15 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:15 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:15 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[2026-11-17 09:57:15] [ERROR] [404] Liaison carrière/compétence n°1 introuvable | GET /api/carriere-competence/1 | IP: 127.0.0.1 | From: CarriereCompetenceController.php:26
+[17-Nov-2026 09:57:15 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:15 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:15 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:15 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[17-Nov-2026 09:57:15 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:15 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[2026-11-17 09:57:15] [ERROR] [404] Projet n°99999 introuvable | GET /api/projets/99999 | IP: 127.0.0.1 | From: ProjetsController.php:26
+[17-Nov-2026 09:57:15 UTC] PHP Warning:  file(/home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/../.env): Failed to open stream: No such file or directory in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 4
+[17-Nov-2026 09:57:15 UTC] PHP Warning:  foreach() argument must be of type array|object, false given in /home/mehiaoui3001/ProjetsPersonnels/Portfolio2026/config/configJWT.php on line 5
+[2026-11-17 09:57:15] [ERROR] [404] Route non trouvée : GET /api/visites | GET /api/visites | IP: 127.0.0.1 | From: Router.php:113
+[2026-11-17 09:58:38] [ERROR] [404] Image de projet n°1 introuvable | GET /api/images-projet/1 | IP: 127.0.0.1 | From: ImageProjetController.php:27
+[2026-11-17 09:58:38] [ERROR] [404] Carrière visée n°1 introuvable | GET /api/carrieres/1 | IP: 127.0.0.1 | From: CarriereViseeController.php:26
+[2026-11-17 09:58:39] [ERROR] [404] Liaison carrière/compétence n°1 introuvable | GET /api/carriere-competence/1 | IP: 127.0.0.1 | From: CarriereCompetenceController.php:26
+[2026-11-17 09:58:39] [ERROR] [404] Projet n°99999 introuvable | GET /api/projets/99999 | IP: 127.0.0.1 | From: ProjetsController.php:26
+[2026-11-17 09:58:39] [ERROR] [404] Route non trouvée : GET /api/visites | GET /api/visites | IP: 127.0.0.1 | From: Router.php:113
+[2026-11-17 10:00:59] [ERROR] [404] Image de projet n°1 introuvable | GET /api/images-projet/1 | IP: 127.0.0.1 | From: ImageProjetController.php:27
+[2026-11-17 10:01:00] [ERROR] [404] Carrière visée n°1 introuvable | GET /api/carrieres/1 | IP: 127.0.0.1 | From: CarriereViseeController.php:26
+[2026-11-17 10:01:00] [ERROR] [404] Liaison carrière/compétence n°1 introuvable | GET /api/carriere-competence/1 | IP: 127.0.0.1 | From: CarriereCompetenceController.php:26
+[2026-11-17 10:01:01] [ERROR] [404] Projet n°99999 introuvable | GET /api/projets/99999 | IP: 127.0.0.1 | From: ProjetsController.php:26
+[2026-11-17 10:01:01] [ERROR] [404] Route non trouvée : GET /api/visites | GET /api/visites | IP: 127.0.0.1 | From: Router.php:113
+[2026-11-17 10:01:56] [ERROR] [404] Image de projet n°1 introuvable | GET /api/images-projet/1 | IP: 127.0.0.1 | From: ImageProjetController.php:27
+[2026-11-17 10:01:57] [ERROR] [404] Carrière visée n°1 introuvable | GET /api/carrieres/1 | IP: 127.0.0.1 | From: CarriereViseeController.php:26
+[2026-11-17 10:01:57] [ERROR] [404] Liaison carrière/compétence n°1 introuvable | GET /api/carriere-competence/1 | IP: 127.0.0.1 | From: CarriereCompetenceController.php:26
+[2026-11-17 10:01:57] [ERROR] [404] Projet n°99999 introuvable | GET /api/projets/99999 | IP: 127.0.0.1 | From: ProjetsController.php:26
+[2026-11-17 10:01:57] [ERROR] [404] Route non trouvée : GET /api/visites | GET /api/visites | IP: 127.0.0.1 | From: Router.php:113
+[2026-11-17 10:02:15] [ERROR] [404] Image de projet n°1 introuvable | GET /api/images-projet/1 | IP: 127.0.0.1 | From: ImageProjetController.php:27
+[2026-11-17 10:02:15] [ERROR] [404] Carrière visée n°1 introuvable | GET /api/carrieres/1 | IP: 127.0.0.1 | From: CarriereViseeController.php:26
+[2026-11-17 10:02:15] [ERROR] [404] Liaison carrière/compétence n°1 introuvable | GET /api/carriere-competence/1 | IP: 127.0.0.1 | From: CarriereCompetenceController.php:26
+[2026-11-17 10:02:16] [ERROR] [404] Projet n°99999 introuvable | GET /api/projets/99999 | IP: 127.0.0.1 | From: ProjetsController.php:26

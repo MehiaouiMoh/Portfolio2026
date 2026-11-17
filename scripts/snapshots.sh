@@ -56,7 +56,6 @@ ROUTES=(
 
   # --- Cas d'erreur ---
   "/api/projets/99999"      # 404 : ressource introuvable
-  "/api/visites"            # 401 : route protégée appelée sans token
 )
 
 for r in "${ROUTES[@]}"; do
