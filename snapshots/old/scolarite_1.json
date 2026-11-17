@@ -1,0 +1,15 @@
+{
+  "data": {
+    "date_debut": "2019-09-05",
+    "date_fin": "2022-05-15",
+    "description": "Trois ans de licence en électronique. Mathématiques (stats, énergies), électronique analogique et numérique, informatique (C, VHDL). Formation qui a forgé des capacités de raisonnement et de persévérance.",
+    "etablissement": "Sorbonne Université (UPMC)",
+    "id": 1,
+    "intitule": "Licence 1 Électronique, Énergie Électrique",
+    "niveau": "Licence 1",
+    "user_id": 1,
+    "ville": "Paris"
+  },
+  "message": "Scolarité trouvée",
+  "success": true
+}

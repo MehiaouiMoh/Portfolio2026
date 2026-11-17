@@ -1,0 +1,15 @@
+{
+  "data": [
+    {
+      "avatar": null,
+      "description": "Étudiant passionné par le développement web et mobile. J'aime donner vie aux idées en les transformant en applications concrètes, performantes et agréables à utiliser. Curieux et toujours en quête de progression, j'explore différents aspects du développement pour créer des solutions durables et bien pensées.",
+      "id": 1,
+      "nom": "Mehiaoui",
+      "prenom": "Mohamed",
+      "telephone": null,
+      "user_id": 1
+    }
+  ],
+  "message": "Liste des informations",
+  "success": true
+}

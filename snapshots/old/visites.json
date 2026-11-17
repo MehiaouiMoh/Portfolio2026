@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 2,
+      "ip_address_hash": "SELECT * FROM users",
+      "page": "index",
+      "referrer": "https://google.com",
+      "user_agent": "curl-test",
+      "visited_at": "2026-11-15 19:54:21"
+    },
+    {
+      "id": 1,
+      "ip_address_hash": "a3f5c9e1b2d4f6a8c0e2b4d6f8a0c2e4b6d8f0a2c4e6b8d0f2a4c6e8b0d2f4a6",
+      "page": "index",
+      "referrer": "https://google.com",
+      "user_agent": "curl-test",
+      "visited_at": "2026-11-15 19:51:22"
+    }
+  ],
+  "message": "Liste des visites",
+  "success": true
+}

@@ -1,0 +1,11 @@
+{
+  "data": {
+    "categorie_id": 2,
+    "id": 1,
+    "nom": "API REST",
+    "pourcentage": null,
+    "user_id": 1
+  },
+  "message": "Compétence trouvée",
+  "success": true
+}

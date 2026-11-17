@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "description": "Application web fullstack pour gestion de livraison et commandes de paniers pour la collectivité Jardin de Cocagne (SAE).",
+      "id": 1,
+      "module_id": 1,
+      "nom": "Développement avancé"
+    },
+    {
+      "description": "Résoudre les problèmes liés à la qualité de code, aux tris de données, aux algorithmes de recherche (arbres).",
+      "id": 2,
+      "module_id": 1,
+      "nom": "Qualité algorithmique"
+    },
+    {
+      "description": "Python et machine learning : créer des classes pour l'apprentissage automatique de données.",
+      "id": 3,
+      "module_id": 1,
+      "nom": "Programmation avancée"
+    },
+    {
+      "description": "Création d'un flipper 3D avec Unity et C#.",
+      "id": 4,
+      "module_id": 1,
+      "nom": "Programmation multimédia"
+    },
+    {
+      "description": "Découverte du framework Laravel et création d'une application PetFinder pour signaler des animaux disparus.",
+      "id": 5,
+      "module_id": 1,
+      "nom": "Développement intégré"
+    },
+    {
+      "description": "Création d'une application mobile en Swift génératrice de blagues.",
+      "id": 6,
+      "module_id": 1,
+      "nom": "Développement multiplateforme"
+    }
+  ],
+  "message": "Enseignements du module n°1",
+  "success": true
+}

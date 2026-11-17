@@ -10,7 +10,6 @@ require_once __DIR__ . '/../src/Controllers/CompetencesController.php';
 require_once __DIR__ . '/../src/Controllers/LangagesController.php';
 require_once __DIR__ . '/../src/Controllers/FrameworksController.php';
 require_once __DIR__ . '/../src/Controllers/LogicielsController.php';
-require_once __DIR__ . '/../src/Controllers/VisitesController.php';
 require_once __DIR__ . '/../src/Controllers/ScolariteController.php';
 require_once __DIR__ . '/../src/Controllers/ProjetsController.php';
 require_once __DIR__ . '/../src/Controllers/CarriereViseeController.php';
@@ -78,8 +77,6 @@ $router->get('/api/carriere-competence/{id}', [CarriereCompetenceController::cla
 $router->get('/api/introduction-ecole',      [IntroductionEcoleController::class, 'index']);
 $router->get('/api/introduction-ecole/{id}', [IntroductionEcoleController::class, 'show']);
 
-$router->post('/api/visites', [VisitesController::class, 'store']);
-
 // ============================================================
 // Routes protégées (auth vérifiée dans chaque controller)
 // ============================================================
@@ -110,9 +107,6 @@ $router->post('/api/logiciels',        [LogicielsController::class, 'store']);
 $router->put('/api/logiciels/{id}',    [LogicielsController::class, 'update']);
 $router->delete('/api/logiciels/{id}', [LogicielsController::class, 'destroy']);
 
-$router->get('/api/visites',         [VisitesController::class, 'index']);
-$router->get('/api/visites/{id}',    [VisitesController::class, 'show']);
-$router->delete('/api/visites/{id}', [VisitesController::class, 'destroy']);
 
 $router->post('/api/scolarite',        [ScolariteController::class, 'store']);
 $router->put('/api/scolarite/{id}',    [ScolariteController::class, 'update']);

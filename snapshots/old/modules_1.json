@@ -1,0 +1,11 @@
+{
+  "data": {
+    "description": "Développement avancé, qualité algorithmique, programmation avancée, multimédia et multiplateforme.",
+    "id": 1,
+    "intitule": "Réaliser un développement d'application",
+    "niveau": "Semestre 5",
+    "scolarite_id": 5
+  },
+  "message": "Module trouvé",
+  "success": true
+}

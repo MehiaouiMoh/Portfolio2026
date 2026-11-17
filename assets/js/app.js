@@ -236,21 +236,11 @@ async function loadExperiences() {
   ).join('');
 }
 
-/* ================================================================
-   TRACKING VISITE
-   ================================================================ */
-function trackVisit() {
-  const blob = new Blob([JSON.stringify({ page: 'home' })], { type: 'application/json' });
-  if (navigator.sendBeacon) {
-    navigator.sendBeacon('/api/visites', blob);
-  }
-}
 
 /* ================================================================
    INIT
    ================================================================ */
 (async () => {
-  trackVisit();
   await Promise.all([
     loadCompetences(),
     loadProjets(),

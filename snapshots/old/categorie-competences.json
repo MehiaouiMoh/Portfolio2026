@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "id": 10,
+      "name": "Jeu vidéo"
+    },
+    {
+      "id": 9,
+      "name": "Fullstack"
+    },
+    {
+      "id": 8,
+      "name": "Automatisation IA"
+    },
+    {
+      "id": 7,
+      "name": "Développement mobile"
+    },
+    {
+      "id": 6,
+      "name": "Déploiement"
+    },
+    {
+      "id": 5,
+      "name": "DevOps"
+    },
+    {
+      "id": 4,
+      "name": "Ux/Ui"
+    },
+    {
+      "id": 3,
+      "name": "Base de données"
+    },
+    {
+      "id": 2,
+      "name": "Backend"
+    },
+    {
+      "id": 1,
+      "name": "Frontend"
+    }
+  ],
+  "message": "Liste des catégories de compétences",
+  "success": true
+}

@@ -1,0 +1,11 @@
+{
+  "data": {
+    "categorie_id": 3,
+    "icon": "/../assets/competencesIcones/phpMyAdmin.jpg",
+    "id": 1,
+    "name": "PhpMyAdmin",
+    "pourcentage": null
+  },
+  "message": "Logiciel trouvé",
+  "success": true
+}

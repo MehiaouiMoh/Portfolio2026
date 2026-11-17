@@ -1,0 +1,11 @@
+{
+  "data": {
+    "categorie_id": 1,
+    "icon": "/../assets/competencesIcones/html.png",
+    "id": 1,
+    "name": "HTML",
+    "pourcentage": null
+  },
+  "message": "Langage trouvé",
+  "success": true
+}

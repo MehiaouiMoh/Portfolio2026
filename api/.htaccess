@@ -1,6 +1,13 @@
 RewriteEngine On
 
-# Rôle : dire à Apache de rediriger toutes les URLs vers index.php
+# Ce fichier REMPLACE les règles de la racine pour /api/* :
+# on y recopie donc la redirection HTTPS.
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# routes.php est un fichier interne : jamais appelé directement
+RewriteRule ^routes\.php$ - [F,L]
+
 # Servir directement les fichiers/dossiers existants
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

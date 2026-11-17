@@ -1,21 +1,21 @@
-# ── PHP : forcer PHP 8.x si besoin (o2switch est souvent déjà en 8) ──
-# (à activer seulement si le sélecteur PHP du cPanel ne suffit pas)
-
 # ── Page d'accueil ──
 DirectoryIndex index.html
 
 RewriteEngine On
 
-# ── Sécurité : bloquer l'accès direct aux fichiers/dossiers sensibles ──
-RewriteRule ^\.env$                       - [F,L]
-RewriteRule ^composer\.(json|lock)$       - [F,L]
-RewriteRule ^router\.php$                 - [F,L]
-RewriteRule ^(src|config|database|tests|vendor)(/.*)?$ - [F,L]
+# ── 1. HTTPS d'abord : avant toute autre règle ──
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# ── Routing API : toute requête /api/* → front controller ──
+# ── 2. Sécurité : bloquer fichiers et dossiers sensibles ──
+# Tout fichier/dossier caché (.env, .gitignore, .cpanel.yml…), sauf .well-known (SSL)
+RewriteRule (^|/)\.(?!well-known/) - [F,L]
+# Dossiers internes
+RewriteRule ^(src|config|database|logs|tests|scripts|snapshots|vendor)(/.*)?$ - [F,L]
+# Fichiers racine non publics
+RewriteRule ^(composer\.(json|lock)|router\.php|README\.md|postman_collection\.json)$ - [F,L]
+
+# ── 3. Routing API : toute requête /api/* → front controller ──
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^api/ api/index.php [L]
-
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
